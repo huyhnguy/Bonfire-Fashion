@@ -13,7 +13,7 @@ export default function Navbar() {
         <div>
             <Tab tabname= "Home" path= "/"/>
             <Tab tabname= "Shop" path= "shop"/>
-            <Tab tabname= "Shopping Cart"/>
+            <Tab tabname= "Shopping Cart" path= "cart"/>
         </div>
     )
 }
