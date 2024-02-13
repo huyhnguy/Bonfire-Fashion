@@ -12,8 +12,8 @@ export default function Navbar() {
     return (
         <div>
             <Tab tabname= "Home" path= "/"/>
-            <Tab tabname= "Shop" path= "shop"/>
-            <Tab tabname= "Shopping Cart" path= "cart"/>
+            <Tab tabname= "Shop" path= "/shop"/>
+            <Tab tabname= "Shopping Cart" path= "/cart"/>
         </div>
     )
 }
