@@ -15,8 +15,8 @@ export default function Shop() {
         <>
             <Navbar />
             <h1>Hi! This is the shop page.</h1>
-            {
-                products.map(person => <Product imgSrc={person.image} />)
+            { products &&
+                products.map(product => <Product imgSrc={product.image} key={product.id} />)
             }
         </>
     )
