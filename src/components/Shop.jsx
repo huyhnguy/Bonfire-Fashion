@@ -1,5 +1,5 @@
 import Navbar from "./Navbar"
-import Product from "./Product"
+import Product from "./Product/Product"
 import { useEffect, useState } from "react"
 
 export default function Shop() {
@@ -16,7 +16,7 @@ export default function Shop() {
             <Navbar />
             <h1>Hi! This is the shop page.</h1>
             { products &&
-                products.map(product => <Product imgSrc={product.image} key={product.id} />)
+                products.map(product => <Product data={product} key={product.id} />)
             }
         </>
     )
