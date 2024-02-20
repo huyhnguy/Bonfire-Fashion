@@ -7,11 +7,12 @@ export default function Product({ data }) {
     const [quantity, setQuantity] = useState(0);
     
     function handleIncrease() {
-        setQuantity(quantity + 1);
+        if (quantity < 10) {setQuantity(quantity + 1)}
+        
     }
 
     function handleDecrease() {
-        setQuantity(quantity - 1);
+        if (quantity > 0) {setQuantity(quantity - 1)}
     }
 
     return (
