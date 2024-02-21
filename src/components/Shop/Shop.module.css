@@ -1,0 +1,10 @@
+.shop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.title {
+    text-align:center;
+}

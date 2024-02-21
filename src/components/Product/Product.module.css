@@ -3,21 +3,44 @@
     height:auto;
 }
 
+.quantityContainer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.interactContainer {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
 .image {
-    max-width: 10rem;
-    height: auto;
+    height: 60%;
+    width: 100%;
+    object-fit: contain;
+    border: solid;
+    border-radius: 8.5px;
 }
 
 .container {
+    width: 20rem;
+    height: 25rem;
     border: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    gap: 1rem;
+    justify-content: space-between;
 }
 
 .title {
     font-size: 1rem;
-}
-
-.number {
-    width: 1rem;
+    width: 15rem;
+    text-align: center;
+    margin: 0;
 }
 
 .number::-webkit-outer-spin-button,
