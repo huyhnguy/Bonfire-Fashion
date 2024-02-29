@@ -8,12 +8,15 @@ function Tab({ tabname, path }) {
     )
 };
 
-export default function Navbar() {
+export default function Navbar(data) {
     return (
         <div>
             <Tab tabname= "Home" path= "/"/>
             <Tab tabname= "Shop" path= "/shop"/>
-            <Tab tabname= "Shopping Cart" path= "/cart"/>
+            <Tab 
+                tabname= "Shopping Cart" 
+                path= "/cart" 
+                state= {{ data }}/>
         </div>
     )
 }
