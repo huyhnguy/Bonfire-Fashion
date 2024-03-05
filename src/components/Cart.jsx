@@ -35,15 +35,19 @@ export default function Cart() {
                     .then(res=>res.json())
                     .then(json=>setItem(json))
             }, []);
-        
-            return (
-                <div>
-                    <h1>{item && item.title}</h1>
+
+            if (item != null) {
+                return (
+                <div key={product.id}>
+                    <h1>{item.title}</h1>
+                    <img src={item.image}></img>
                     <p>Quantity: {product.quantity}</p>
                 </div>
-            )
+                )
+            }
+        
+            return null;
         })
-        console.log(shoppingList);
 
         return (
             <>
