@@ -15,7 +15,7 @@ export default function Shop() {
     }, []);
 
     function handleClick(id, quantity) {
-
+        /*
         setShoppingCart(prevShoppingCart => ({
             ...prevShoppingCart, 
             [productNumber]: {
@@ -23,20 +23,23 @@ export default function Shop() {
                 quantity: quantity
             }
         }))
+
         setProductNumber(productNumber + 1);
-        console.log(shoppingCart);
+        console.log(shoppingCart);*/
+
+        localStorage.setItem(productNumber, `${id}-${quantity}`);
+        setProductNumber(productNumber +1);
     }
 
     return (
         <>
-            <Navbar />
+            <Navbar/>
             <h1 className={styles.title}>Hi! This is the shop page.</h1>
             <div className={styles.shop}>
                 { products &&
                     products.map(product => <Product data={product} key={product.id} handleClick={handleClick}/>)
                 }
             </div>
-            
         </>
     )
 }

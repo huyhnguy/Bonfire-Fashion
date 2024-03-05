@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom"
 
-function Tab({ tabname, path }) {
+function Tab({ tabname, path, data }) {
     return (
         <div>
-            <Link to={path}>{tabname}</Link>
+            <Link 
+                to={path}
+                state= {data}
+            >{tabname}</Link>
         </div>
     )
 };
@@ -13,10 +16,7 @@ export default function Navbar(data) {
         <div>
             <Tab tabname= "Home" path= "/"/>
             <Tab tabname= "Shop" path= "/shop"/>
-            <Tab 
-                tabname= "Shopping Cart" 
-                path= "/cart" 
-                state= {{ data }}/>
+            <Tab tabname= "Shopping Cart" path= "/cart" data={data}/>
         </div>
     )
 }
