@@ -1,27 +1,5 @@
 import Navbar from "./Navbar";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-
-function CartItem(id, quantity, key) {
-    const [item, setItem] = useState(null);
-    const startUrl = 'https://fakestoreapi.com/products/'
-    const finalUrl = startUrl.concat(id);
-
-    useEffect(() => {
-        fetch(finalUrl)
-            .then(res=>res.json())
-            .then(json=>console.log(json))
-        setItem(json)
-    }, [item]);
-
-    return (
-        <div key= {key}>
-            <h1>{item && item.title}</h1>
-            <p>Quantity: {quantity}</p>
-        </div>
-    )
-}
-
 
 export default function Cart() {
     let products = [];
@@ -76,16 +54,4 @@ export default function Cart() {
             </div>
         </>
         )
-
-    /*
-
-    const [products, setProducts] = useState(null);
-
-    let { state } = useLocation();
-    console.log(state);
-
-    function adjustCart() {
-        setProducts(state);
-        console.log(products);
-    }*/
 }
