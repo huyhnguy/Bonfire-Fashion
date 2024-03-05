@@ -4,12 +4,6 @@ import { useState, useEffect } from "react";
 export default function Cart() {
     let products = [];
 
-    useEffect(() => {
-        fetch('https://fakestoreapi.com/products/1')
-            .then(res=>res.json())
-            .then(json=>console.log(json))
-    }, []);
-
     if (localStorage != undefined) {
         for (let i = 0; i < localStorage.length; i++) {
             const pair = localStorage[i];
@@ -28,7 +22,6 @@ export default function Cart() {
             const [item, setItem] = useState(null);
             const startUrl = 'https://fakestoreapi.com/products/'
             const finalUrl = startUrl.concat(product.id);
-            console.log(typeof product.id)
         
             useEffect(() => {
                 fetch(finalUrl)

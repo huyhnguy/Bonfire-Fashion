@@ -5,7 +5,6 @@ import styles from "./Shop.module.css"
 
 export default function Shop() {
     const [products, setProducts] = useState(null);
-    const [shoppingCart, setShoppingCart] = useState({});
     const [productNumber, setProductNumber] = useState(0);
 
     useEffect(() => {
@@ -15,18 +14,6 @@ export default function Shop() {
     }, []);
 
     function handleClick(id, quantity) {
-        /*
-        setShoppingCart(prevShoppingCart => ({
-            ...prevShoppingCart, 
-            [productNumber]: {
-                id: id,
-                quantity: quantity
-            }
-        }))
-
-        setProductNumber(productNumber + 1);
-        console.log(shoppingCart);*/
-
         localStorage.setItem(productNumber, `${id}-${quantity}`);
         setProductNumber(productNumber +1);
     }
