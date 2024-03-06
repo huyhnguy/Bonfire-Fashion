@@ -5,7 +5,7 @@ import styles from "./Shop.module.css"
 
 export default function Shop() {
     const [products, setProducts] = useState(null);
-    const [productNumber, setProductNumber] = useState(0);
+    const [productNumber, setProductNumber] = useState(localStorage.length);
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -14,8 +14,12 @@ export default function Shop() {
     }, []);
 
     function handleClick(id, quantity) {
+        for (let i = 0; i < localStorage.length; i++) {
+
+        }
+
         localStorage.setItem(productNumber, `${id}-${quantity}`);
-        setProductNumber(productNumber +1);
+        setProductNumber(localStorage.length);
     }
 
     return (
