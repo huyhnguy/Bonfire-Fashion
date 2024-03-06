@@ -15,7 +15,13 @@ export default function Shop() {
 
     function handleClick(id, quantity) {
         for (let i = 0; i < localStorage.length; i++) {
+            const currentId = Number(localStorage[i].substring(0, localStorage[i].indexOf('-')));
+            if (id === currentId) {
+                const currentQuantity = Number(localStorage[i].substring(localStorage[i].indexOf('-') + 1));
+                const newQuantity = currentQuantity + quantity;
 
+                return localStorage.setItem([i], `${id}-${newQuantity}`);
+            }
         }
 
         localStorage.setItem(productNumber, `${id}-${quantity}`);
