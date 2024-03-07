@@ -35,13 +35,11 @@ export default function Cart() {
                     console.log(value);
                     console.log(product.id);
                     if (value.startsWith(product.id) === true) {
-                        for (let j = i + 1; j <= localStorage.length; j++) {
-                            localStorage.setItem([j-1], localStorage[j])
+                        for (let j = i ; j <= localStorage.length; j++) {
+                            localStorage.setItem([j], localStorage[j+1])
                             if (j === localStorage.length - 1) {
-                                localStorage.removeItem(j);
-                            }
-                            if (j === localStorage.length) {
-                                localStorage.removeItem(j-1);
+                                console.log(localStorage[j]);
+                                localStorage.removeItem([j]);
                             }
                         }
                     }
