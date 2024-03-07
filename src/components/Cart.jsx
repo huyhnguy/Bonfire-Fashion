@@ -29,12 +29,28 @@ export default function Cart() {
                     .then(json=>setItem(json))
             }, []);
 
+            function handleDelete() {
+                for (let i = 0; i < localStorage.length; i++) {
+                    const value = localStorage.getItem([i]);
+                    console.log(value);
+                    if (value.startsWith(product.id) === true) {
+                        for (let j = i + 1; j < localStorage.length; j++) {
+                            localStorage.setItem([j-1], localStorage[j])
+                            if (j === localStorage.length - 1) {
+                                localStorage.removeItem(j);
+                            }
+                        }
+                    }
+                }
+            }
+
             if (item != null) {
                 return (
                 <div key={product.id}>
                     <h1>{item.title}</h1>
                     <img src={item.image}></img>
                     <p>Quantity: {product.quantity}</p>
+                    <button onClick={handleDelete}>Delete</button>
                 </div>
                 )
             }
