@@ -33,11 +33,15 @@ export default function Cart() {
                 for (let i = 0; i < localStorage.length; i++) {
                     const value = localStorage.getItem([i]);
                     console.log(value);
+                    console.log(product.id);
                     if (value.startsWith(product.id) === true) {
-                        for (let j = i + 1; j < localStorage.length; j++) {
+                        for (let j = i + 1; j <= localStorage.length; j++) {
                             localStorage.setItem([j-1], localStorage[j])
                             if (j === localStorage.length - 1) {
                                 localStorage.removeItem(j);
+                            }
+                            if (j === localStorage.length) {
+                                localStorage.removeItem(j-1);
                             }
                         }
                     }
