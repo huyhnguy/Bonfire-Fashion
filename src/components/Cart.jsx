@@ -32,16 +32,27 @@ export default function Cart() {
             function handleDelete() {
                 for (let i = 0; i < localStorage.length; i++) {
                     const value = localStorage.getItem([i]);
-                    console.log(value);
-                    console.log(product.id);
                     if (value.startsWith(product.id) === true) {
                         for (let j = i ; j <= localStorage.length; j++) {
                             localStorage.setItem([j], localStorage[j+1])
                             if (j === localStorage.length - 1) {
-                                console.log(localStorage[j]);
                                 localStorage.removeItem([j]);
                             }
                         }
+                    }
+                }
+            }
+
+            function handleChange(e) {
+                if (Number(e.target.value) === 0 && e.target.value != '') {
+                    handleDelete();
+                }
+
+                for (let i = 0; i < localStorage.length; i++) {
+                    const value = localStorage.getItem([i]);
+                    if (value.startsWith(product.id) === true) {
+                        const newValue = product.id + '-' + e.target.value;
+                        localStorage.setItem([i], newValue);
                     }
                 }
             }
@@ -51,7 +62,8 @@ export default function Cart() {
                 <div key={product.id}>
                     <h1>{item.title}</h1>
                     <img src={item.image}></img>
-                    <p>Quantity: {product.quantity}</p>
+                    <label>Quantity:</label>
+                    <input type="number" defaultValue={product.quantity} onChange={handleChange}></input>
                     <button onClick={handleDelete}>Delete</button>
                 </div>
                 )
