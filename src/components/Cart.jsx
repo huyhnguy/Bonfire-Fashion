@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import { useState, useEffect } from "react";
 
 export default function Cart() {
+    const [cartChange, setCartChange] = useState(false);
     let products = [];
 
     if (localStorage != undefined) {
@@ -20,6 +21,7 @@ export default function Cart() {
 
         const shoppingList = products.map((product) => {
             const [item, setItem] = useState(null);
+            const [seed, setSeed] = useState(Math.random());
             const startUrl = 'https://fakestoreapi.com/products/'
             const finalUrl = startUrl.concat(product.id);
         
@@ -41,6 +43,8 @@ export default function Cart() {
                         }
                     }
                 }
+                window.location.reload();
+                
             }
 
             function handleChange(e) {
@@ -55,6 +59,8 @@ export default function Cart() {
                         localStorage.setItem([i], newValue);
                     }
                 }
+
+                return setSeed(Math.random());
             }
 
             if (item != null) {
@@ -67,9 +73,7 @@ export default function Cart() {
                     <button onClick={handleDelete}>Delete</button>
                 </div>
                 )
-            }
-        
-            return null;
+            } 
         })
 
         return (
