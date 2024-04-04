@@ -26,7 +26,7 @@ function CartTab({ tabname, path }) {
 export default function Navbar() {
 
     return (
-        <div>
+        <div role="navigation">
             <Tab tabname= "Home" path= "/"/>
             <Tab tabname= "Shop" path= "/shop"/>
             <CartTab tabname= "Shopping Cart" path= "/cart"/>

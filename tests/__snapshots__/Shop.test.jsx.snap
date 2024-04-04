@@ -1,0 +1,42 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Shop component > renders all products 1`] = `
+<div>
+  <div
+    role="navigation"
+  >
+    <div>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+    </div>
+    <div>
+      <a
+        href="/shop"
+      >
+        Shop
+      </a>
+    </div>
+    <div>
+      <a
+        href="/cart"
+      >
+        Shopping Cart
+         (
+        0
+        )
+      </a>
+    </div>
+  </div>
+  <h1
+    class="_title_008a62"
+  >
+    Hi! This is the shop page.
+  </h1>
+  <div
+    class="_shop_008a62"
+  />
+</div>
+`;
