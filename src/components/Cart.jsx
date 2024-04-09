@@ -65,7 +65,7 @@ export default function Cart() {
 
             if (item != null) {
                 return (
-                <div key={product.id}>
+                <div key={product.id} role="listitem">
                     <h1>{item.title}</h1>
                     <img src={item.image}></img>
                     <label>Quantity:</label>
@@ -80,7 +80,7 @@ export default function Cart() {
             <>
             <Navbar />
             <h1>Hi! This is your shopping cart.</h1>
-            <div>
+            <div role="list">
                 {shoppingList}
             </div>
         </>

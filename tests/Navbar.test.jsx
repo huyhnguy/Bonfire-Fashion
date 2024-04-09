@@ -1,10 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Navbar from "../src/components/Navbar";
-import { vi } from "vitest";
 import { BrowserRouter } from "react-router-dom";
 import App from "../src/components/App";
-import Shop from "../src/components/Shop/Shop";
 
 describe("Navigation bar", () => {
     it("renders navigation bar", () => {
