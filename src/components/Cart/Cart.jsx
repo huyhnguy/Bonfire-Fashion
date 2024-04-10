@@ -1,5 +1,6 @@
-import Navbar from "./Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import { useState, useEffect } from "react";
+import styles from "./Cart.module.css"
 
 export default function Cart() {
     const [cartChange, setCartChange] = useState(false);
@@ -78,10 +79,10 @@ export default function Cart() {
 
         return (
             <>
+            <p className={styles.title}>HUYS</p>
             <Navbar />
-            <h1>Hi! This is your shopping cart.</h1>
             <div role="list">
-                {shoppingList}
+                {products.length > 0 ? shoppingList : <p>Your cart is empty!</p>}
             </div>
         </>
         )

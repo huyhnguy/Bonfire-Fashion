@@ -30,8 +30,8 @@ export default function Shop() {
 
     return (
         <>
+            <p className={styles.title}>HUYS</p>
             <Navbar/>
-            <h1 className={styles.title}>Hi! This is the shop page.</h1>
             <div className={styles.shop}>
                 { products &&
                     products.map(product => <Product data={product} key={product.id} handleClick={handleClick}/>)
