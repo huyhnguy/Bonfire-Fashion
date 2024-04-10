@@ -1,4 +1,4 @@
-import Navbar from "../Navbar"
+import Navbar from "../Navbar/Navbar"
 import Product from "../Product/Product"
 import { useEffect, useState } from "react"
 import styles from "./Shop.module.css"

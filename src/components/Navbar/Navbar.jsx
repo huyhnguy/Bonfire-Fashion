@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { useState } from "react";
+import styles from "./Navbar.module.css"
 
 function Tab({ tabname, path }) {
     return (
@@ -26,10 +26,10 @@ function CartTab({ tabname, path }) {
 export default function Navbar() {
 
     return (
-        <div role="navigation">
-            <Tab tabname= "Home" path= "/" role="link"/>
-            <Tab tabname= "Shop" path= "/shop" role="link" />
-            <CartTab tabname= "Shopping Cart" path= "/cart" role="link"/>
+        <div role="navigation" className={styles.navigation}>
+            <Tab tabname= "HOME" path= "/" role="link"/>
+            <Tab tabname= "SHOP" path= "/shop" role="link" />
+            <CartTab tabname= "SHOPPING CART" path= "/cart" role="link"/>
         </div>
     )
 }
