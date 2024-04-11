@@ -11,4 +11,9 @@ a {
     border: solid;
     padding: 0.5rem;
 }
+
+a:hover {
+    color: white;
+    background-color: black;
+}
   
