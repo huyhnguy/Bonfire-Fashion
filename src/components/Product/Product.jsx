@@ -4,7 +4,6 @@ import styles from "./Product.module.css"
 import { useState } from "react";
 
 export default function Product({ data, handleClick }) {
-    console.log(data);
     const [quantity, setQuantity] = useState(0);
     
     function handleIncrease(e) {

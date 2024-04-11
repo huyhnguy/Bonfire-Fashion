@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Navbar from "../src/components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
-import App from "../src/components/App";
+import App from "../src/components/App/App";
 
 describe("Navigation bar", () => {
     it("renders navigation bar", () => {

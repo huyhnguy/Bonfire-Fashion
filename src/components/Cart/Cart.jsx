@@ -66,12 +66,15 @@ export default function Cart() {
 
             if (item != null) {
                 return (
-                <div key={product.id} role="listitem">
-                    <h1>{item.title}</h1>
-                    <img src={item.image}></img>
-                    <label>Quantity:</label>
-                    <input type="number" defaultValue={product.quantity} onChange={handleChange}></input>
-                    <button onClick={handleDelete}>Delete</button>
+                <div key={product.id} role="listitem" className={styles.item}>
+                    <img src={item.image} className={styles.image}></img>
+                    <p className={styles.text}>{item.title}</p>
+                    <p className={styles.text}>${item.price}</p>
+                    <div className={styles.quantitybox}>
+                        <label>Quantity:</label>
+                        <input type="number" defaultValue={product.quantity} onChange={handleChange} className={styles.input}></input>
+                        <button onClick={handleDelete} className={styles.delete}>Delete</button>
+                    </div>
                 </div>
                 )
             } 
@@ -81,7 +84,7 @@ export default function Cart() {
             <>
             <p className={styles.title}>HUYS</p>
             <Navbar />
-            <div role="list">
+            <div role="list" className={styles.cart}>
                 {products.length > 0 ? shoppingList : <p>Your cart is empty!</p>}
             </div>
         </>

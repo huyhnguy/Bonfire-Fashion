@@ -4,3 +4,36 @@
     margin-top: 0rem;
     margin-bottom: 0rem;
 }
+
+.item {
+    width: 20rem;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.image {
+    height: 75%;
+    width: 100%;
+    object-fit: contain;
+    border: solid;
+
+}
+
+.text {
+    margin: 0;
+}
+
+.quantitybox {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem 1rem;
+    justify-content: space-between;
+}
