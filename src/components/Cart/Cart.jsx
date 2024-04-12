@@ -83,7 +83,7 @@ export default function Cart() {
         return (
             <>
             <p className={styles.title}>HUYS</p>
-            <Navbar />
+            <Navbar activeTab="cart"/>
             <div role="list" className={styles.cart}>
                 {products.length > 0 ? shoppingList : <p>Your cart is empty!</p>}
             </div>

@@ -31,7 +31,7 @@ export default function Shop() {
     return (
         <>
             <p className={styles.title}>HUYS</p>
-            <Navbar/>
+            <Navbar activeTab="shop"/>
             <div className={styles.shop}>
                 { products &&
                     products.map(product => <Product data={product} key={product.id} handleClick={handleClick}/>)

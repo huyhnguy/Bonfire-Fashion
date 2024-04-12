@@ -16,4 +16,8 @@ a:hover {
     color: white;
     background-color: black;
 }
+
+.active {
+    font-weight: 700;
+}
   
