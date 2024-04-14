@@ -1,11 +1,13 @@
 import Navbar from "../Navbar/Navbar"
 import Product from "../Product/Product"
+import PopUp from "../Popup/Popup"
 import { useEffect, useState } from "react"
 import styles from "./Shop.module.css"
 
 export default function Shop() {
     const [products, setProducts] = useState(null);
     const [productNumber, setProductNumber] = useState(localStorage.length);
+    const [popUpData, setPopUpData] = useState(undefined)
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -26,10 +28,21 @@ export default function Shop() {
 
         localStorage.setItem(productNumber, `${id}-${quantity}`);
         setProductNumber(localStorage.length);
+        setPopUpData(
+            {
+                id: id,
+                quantity: quantity
+            }
+        )
+    }
+
+    function closePopUp() {
+        setPopUpData(undefined);
     }
 
     return (
         <>
+            {popUpData && <PopUp data={popUpData} closeFunction={closePopUp}/>}
             <p className={styles.title}>HUYS</p>
             <Navbar activeTab="shop"/>
             <div className={styles.shop}>
