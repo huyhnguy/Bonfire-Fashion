@@ -9,6 +9,7 @@ export default function Shop() {
     const [productNumber, setProductNumber] = useState(localStorage.length);
     const [popUpData, setPopUpData] = useState(undefined)
 
+    console.log(popUpData);
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
@@ -22,6 +23,13 @@ export default function Shop() {
                 const currentQuantity = Number(localStorage[i].substring(localStorage[i].indexOf('-') + 1));
                 const newQuantity = currentQuantity + quantity;
 
+                setPopUpData(
+                    {
+                        id: id,
+                        quantity: quantity
+                    }
+                )
+                
                 return localStorage.setItem([i], `${id}-${newQuantity}`);
             }
         }
