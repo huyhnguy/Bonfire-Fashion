@@ -7,9 +7,8 @@
     border-radius: 10px;
     z-index: 10;
     background-color: white;
-    width: 500px;
-    max-width: 80%;
-    padding: 10px 15px;
+
+    padding: 1rem;
 }
 
 .modal.active {
@@ -34,6 +33,7 @@
 
 h1 {
     margin: 0;
+    margin-bottom: 0.75rem;
 }
 
 #overlay {
@@ -52,9 +52,39 @@ h1 {
 }
 
 .image {
-    height: 30rem;
-    width: 20rem;
-    object-fit: contain;
-    border: solid;
+    height: auto;
+    width: 250px;
+    border-right: solid;
+    grid-area: image;
+    padding: 1rem;
+}
 
+p{
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.body {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "image text"
+        "image text"
+    ;
+    gap: 1rem 0;
+    border: solid;
+}
+
+.bodytext {
+    grid-area: text;
+    width: 250px;
+    height: auto;
+    padding: 1rem;
+}
+
+.link {
+    grid-area: link;
+    text-align: center;
+    margin-top: 0.75rem;
+    display:block;
 }

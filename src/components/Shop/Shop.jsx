@@ -9,7 +9,6 @@ export default function Shop() {
     const [productNumber, setProductNumber] = useState(localStorage.length);
     const [popUpData, setPopUpData] = useState(undefined)
 
-    console.log(popUpData);
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())

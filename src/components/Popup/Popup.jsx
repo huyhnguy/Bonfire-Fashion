@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function PopUp({ data, closeFunction }) {
-    console.log(data);
         const [item, setItem] = useState(null);
         const startUrl = 'https://fakestoreapi.com/products/'
         const finalUrl = startUrl.concat(data.id);
@@ -19,13 +18,17 @@ export default function PopUp({ data, closeFunction }) {
                 <>
                     <div className={`${styles.modal} ${styles.active}`}>
                         <div className={styles.header}>
-                            <h1>Added to Cart</h1>
+                            <h1>ADDED TO CART</h1>
                             <button onClick={closeFunction} className={styles.close}>&times;</button>
                         </div>
-                        <img src={item.image} className={styles.image}></img>
-                        <p>{item.title}</p>
-                        <p>Quantity: {data.quantity}</p>
-                        <Link to='/cart'>See Shopping Cart</Link>
+                        <div className={styles.body}>
+                            <img src={item.image} className={styles.image}></img>
+                            <div className={styles.bodytext}>
+                                <p className={styles.title}>{item.title}</p>
+                                <p className={styles.quantity}>Quantity: {data.quantity}</p>
+                            </div>
+                        </div>
+                        <Link to='/cart' className={styles.link}>SEE SHOPPING CART</Link>
                     </div>
                     <div id={styles.overlay}></div>
                 </>
