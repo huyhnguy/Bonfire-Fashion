@@ -3,12 +3,14 @@ import { useState, useEffect } from "react";
 import styles from "./Cart.module.css"
 
 function Summary({ subtotal }) {
+
     return(
         <div>
             <h1>Summary</h1>
             <p>Subtotal:</p>
             <p>${subtotal}</p>
             <p>Shipping & Handling:</p>
+            <p>${localStorage.length > 0 && 8}</p>
             <p>Estimated Tax:</p>
             <p>Total:</p>
         </div>
