@@ -9,3 +9,19 @@
     text-align: center;
     margin-top: 10%;
 }
+
+.ground {
+    width: 100%;
+}
+
+.link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+    border: none;
+    padding: 0;
+}
+
+.credit {
+    text-align:end;
+}
