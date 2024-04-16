@@ -35,4 +35,42 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5rem 1rem;
+    justify-content: space-evenly;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "title title"
+    ;
+    height: 15rem;
+}
+
+.summaryTitle {
+    grid-area: title;
+    text-align: center;
+}
+
+.price {
+    justify-self: end;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+h4 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.checkout {
+    grid-column: 1 / span 2;
+    padding: 0.5rem;
+}
+
+button {
+    cursor: pointer;
 }
