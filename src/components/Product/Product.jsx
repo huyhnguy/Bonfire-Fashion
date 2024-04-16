@@ -25,14 +25,14 @@ export default function Product({ data, handleClick }) {
         <div className={styles.container}>
             <img src={data.image} className={styles.image}></img>
             <h1 className={styles.title}>{data.title}</h1>
-            <h1 className={styles.title}>${data.price}</h1>
+            <h1 className={styles.title}>${data.price.toFixed(2)}</h1>
             <div className={styles.interactContainer}>
                 <div className={styles.quantityContainer}>
                     <img src={decrease} className={styles.quantity} onClick={handleDecrease} role="button"></img>
                     <input type="number" className={styles.number} value={quantity} onChange={handleChange}></input>
                     <img src={increase} className={styles.quantity} onClick={handleIncrease} role="button"></img>
                 </div>
-                <button onClick={() => handleClick(data.id, quantity)}>Add to cart</button>
+                <button onClick={() => handleClick(data.id, quantity)}>Add to Cart</button>
             </div>
         </div>
     )

@@ -3,16 +3,28 @@ import { useState, useEffect } from "react";
 import styles from "./Cart.module.css"
 
 function Summary({ subtotal }) {
+    let shippingHandling;
+
+    if (localStorage.length > 0) {
+        shippingHandling = 8;
+    } else {
+        shippingHandling = 0;
+    }
+
+    let tax = (subtotal + shippingHandling) * 0.0825;
+    let total = subtotal + shippingHandling + tax;
 
     return(
         <div>
             <h1>Summary</h1>
             <p>Subtotal:</p>
-            <p>${subtotal}</p>
+            <p>${(Math.round(subtotal * 100) / 100).toFixed(2)}</p>
             <p>Shipping & Handling:</p>
-            <p>${localStorage.length > 0 && 8}</p>
-            <p>Estimated Tax:</p>
+            <p>${shippingHandling}</p>
+            <p>Tax:</p>
+            <p>${(Math.round(tax * 100) / 100).toFixed(2)}</p>
             <p>Total:</p>
+            <p>${(Math.round(total * 100) / 100).toFixed(2)}</p>
         </div>
     )
 }
@@ -88,7 +100,7 @@ export default function Cart() {
                 <div key={product.id} role="listitem" className={styles.item}>
                     <img src={item.image} className={styles.image}></img>
                     <p className={styles.text}>{item.title}</p>
-                    <p className={styles.text}>${itemTotal}</p>
+                    <p className={styles.text}>${(Math.round(itemTotal * 100) / 100).toFixed(2)}</p>
                     <div className={styles.quantitybox}>
                         <label>Quantity:</label>
                         <input type="number" defaultValue={product.quantity} onChange={handleChange} className={styles.input}></input>
