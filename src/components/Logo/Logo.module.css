@@ -3,4 +3,11 @@
     font-size: 7rem;
     margin-top: 0rem;
     margin-bottom: 0rem;
+    border: none;
+    padding: 0;
+}
+
+.title:hover {
+    background-color: white;
+    color: black;
 }

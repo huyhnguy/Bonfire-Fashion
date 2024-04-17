@@ -1,7 +1,11 @@
 import styles from "./Logo.module.css"
+import { Link } from "react-router-dom";
 
 export default function Logo() {
+    function handleClick() {
+
+    }
     return (
-        <h1 className={styles.title}>HUYS</h1>
+        <Link to='/' className={styles.title}>HUYS</Link>
     )
 }
