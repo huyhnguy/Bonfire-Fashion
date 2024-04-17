@@ -45,23 +45,35 @@ export default function Navbar({ activeTab }) {
             <div role="navigation" className={styles.navigation}>
                 <Tab tabname= "HOME" path= "/" role="link" active="active" />
                 <Tab tabname= "SHOP" path= "/shop" role="link" />
+                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
                 <CartTab tabname= "SHOPPING CART" path= "/cart" role="link"/>
             </div>
         )
     } else if (activeTab === 'shop') {
         return (
             <div role="navigation" className={styles.navigation}>
-                <Tab tabname= "HOME" path= "/" role="link"/>
+                <Tab tabname= "HOME" path= "/" role="link" />
                 <Tab tabname= "SHOP" path= "/shop" role="link" active="active" />
-                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link"/>
+                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
+                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" />
+            </div>
+        )
+    } else if (activeTab === 'jewelry') {
+        return (
+            <div role="navigation" className={styles.navigation}>
+                <Tab tabname= "HOME" path= "/" role="link" />
+                <Tab tabname= "SHOP" path= "/shop" role="link" />
+                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" active="active" />
+                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" />
             </div>
         )
     } else if (activeTab === 'cart') {
         return (
             <div role="navigation" className={styles.navigation}>
-                <Tab tabname= "HOME" path= "/" role="link"/>
+                <Tab tabname= "HOME" path= "/" role="link" />
                 <Tab tabname= "SHOP" path= "/shop" role="link" />
-                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" active="active"/>
+                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
+                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" active="active" />
             </div>
         )
     }

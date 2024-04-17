@@ -4,16 +4,16 @@ import PopUp from "../Popup/Popup"
 import { useEffect, useState } from "react"
 import styles from "./Shop.module.css"
 
-export default function Shop() {
+export default function Shop({ url, tab }) {
     const [products, setProducts] = useState(null);
     const [productNumber, setProductNumber] = useState(localStorage.length);
     const [popUpData, setPopUpData] = useState(undefined)
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
+        fetch(url)
             .then(res=>res.json())
             .then(json=> setProducts(json))
-    }, []);
+    }, [url]);
 
     function handleClick(id, quantity) {
         for (let i = 0; i < localStorage.length; i++) {
@@ -51,7 +51,7 @@ export default function Shop() {
         <>
             {popUpData && <PopUp data={popUpData} closeFunction={closePopUp}/>}
             <p className={styles.title}>HUYS</p>
-            <Navbar activeTab="shop"/>
+            <Navbar activeTab={tab} />
             <div className={styles.shop}>
                 { products &&
                     products.map(product => <Product data={product} key={product.id} handleClick={handleClick}/>)

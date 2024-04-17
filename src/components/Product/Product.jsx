@@ -20,7 +20,7 @@ export default function Product({ data, handleClick }) {
     function handleChange(e) {
         setQuantity(e.target.value);
     }
-
+    
     return (
         <div className={styles.container}>
             <img src={data.image} className={styles.image}></img>
