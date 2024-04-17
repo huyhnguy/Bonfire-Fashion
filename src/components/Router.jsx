@@ -12,10 +12,6 @@ const Router = () => {
             errorElement: <ErrorPage />,
         },
         {
-            path: "shop",
-            element: <Shop url='https://fakestoreapi.com/products' tab='shop'/>,
-        },
-        {
             path: "jewelry",
             element: <Shop url='https://fakestoreapi.com/products/category/jewelery' tab='jewelry'/>,
         },
