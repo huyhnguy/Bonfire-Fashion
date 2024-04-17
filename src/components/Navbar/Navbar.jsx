@@ -45,7 +45,10 @@ export default function Navbar({ activeTab }) {
             <div role="navigation" className={styles.navigation}>
                 <Tab tabname= "HOME" path= "/" role="link" active="active" />
                 <Tab tabname= "SHOP" path= "/shop" role="link" />
+                <Tab tabname= "MENS" path= "/mens" role="link" />
+                <Tab tabname= "WOMENS" path= "/womens" role= "link" />
                 <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
+                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" />
                 <CartTab tabname= "SHOPPING CART" path= "/cart" role="link"/>
             </div>
         )
@@ -54,7 +57,46 @@ export default function Navbar({ activeTab }) {
             <div role="navigation" className={styles.navigation}>
                 <Tab tabname= "HOME" path= "/" role="link" />
                 <Tab tabname= "SHOP" path= "/shop" role="link" active="active" />
+                <Tab tabname= "MENS" path= "/mens" role="link" />
+                <Tab tabname= "WOMENS" path= "/womens" role= "link" />
                 <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
+                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" />
+                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" />
+            </div>
+        )
+    } else if (activeTab === 'mens') {
+        return (
+            <div role="navigation" className={styles.navigation}>
+                <Tab tabname= "HOME" path= "/" role="link" />
+                <Tab tabname= "SHOP" path= "/shop" role="link" />
+                <Tab tabname= "MENS" path= "/mens" role="link" active="active"/>
+                <Tab tabname= "WOMENS" path= "/womens" role= "link" />
+                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
+                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" />
+                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" />
+            </div>
+        )
+    } else if (activeTab === 'womens') {
+        return (
+            <div role="navigation" className={styles.navigation}>
+                <Tab tabname= "HOME" path= "/" role="link" />
+                <Tab tabname= "SHOP" path= "/shop" role="link" />
+                <Tab tabname= "MENS" path= "/mens" role="link" />
+                <Tab tabname= "WOMENS" path= "/womens" role= "link" active="active" />
+                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
+                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" />
+                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" />
+            </div>
+        )
+    } else if (activeTab === 'electronics') {
+        return (
+            <div role="navigation" className={styles.navigation}>
+                <Tab tabname= "HOME" path= "/" role="link" />
+                <Tab tabname= "SHOP" path= "/shop" role="link" />
+                <Tab tabname= "MENS" path= "/mens" role="link" />
+                <Tab tabname= "WOMENS" path= "/womens" role= "link" />
+                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
+                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" active="active" />
                 <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" />
             </div>
         )
@@ -63,7 +105,10 @@ export default function Navbar({ activeTab }) {
             <div role="navigation" className={styles.navigation}>
                 <Tab tabname= "HOME" path= "/" role="link" />
                 <Tab tabname= "SHOP" path= "/shop" role="link" />
+                <Tab tabname= "MENS" path= "/mens" role="link" />
+                <Tab tabname= "WOMENS" path= "/womens" role= "link" />
                 <Tab tabname= "JEWELRY" path= "/jewelry" role="link" active="active" />
+                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" />
                 <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" />
             </div>
         )
@@ -72,7 +117,10 @@ export default function Navbar({ activeTab }) {
             <div role="navigation" className={styles.navigation}>
                 <Tab tabname= "HOME" path= "/" role="link" />
                 <Tab tabname= "SHOP" path= "/shop" role="link" />
+                <Tab tabname= "MENS" path= "/mens" role="link" />
+                <Tab tabname= "WOMENS" path= "/womens" role= "link" />
                 <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
+                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" />
                 <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" active="active" />
             </div>
         )

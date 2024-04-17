@@ -20,6 +20,18 @@ const Router = () => {
             element: <Shop url='https://fakestoreapi.com/products/category/jewelery' tab='jewelry'/>,
         },
         {
+            path: "electronics",
+            element: <Shop url='https://fakestoreapi.com/products/category/electronics' tab='electronics'/>,
+        },
+        {
+            path: "mens",
+            element: <Shop url="https://fakestoreapi.com/products/category/men's%20clothing" tab='mens'/>,
+        },
+        {
+            path: "womens",
+            element: <Shop url="https://fakestoreapi.com/products/category/women's%20clothing" tab='womens'/>,
+        },
+        {
             path: "cart",
             element: <Cart />,
         },
