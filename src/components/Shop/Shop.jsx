@@ -3,6 +3,7 @@ import Product from "../Product/Product"
 import PopUp from "../Popup/Popup"
 import { useEffect, useState } from "react"
 import styles from "./Shop.module.css"
+import Logo from "../Logo/Logo"
 
 export default function Shop({ url, tab }) {
     const [products, setProducts] = useState(null);
@@ -50,7 +51,7 @@ export default function Shop({ url, tab }) {
     return (
         <>
             {popUpData && <PopUp data={popUpData} closeFunction={closePopUp}/>}
-            <p className={styles.title}>HUYS</p>
+            <Logo />
             <Navbar activeTab={tab} />
             <div className={styles.shop}>
                 { products &&

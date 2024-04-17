@@ -1,6 +1,7 @@
 import Navbar from "../Navbar/Navbar";
 import { useState, useEffect } from "react";
 import styles from "./Cart.module.css"
+import Logo from "../Logo/Logo";
 
 function Summary({ subtotal }) {
     let shippingHandling;
@@ -116,7 +117,7 @@ export default function Cart() {
 
         return (
         <>
-            <p className={styles.title}>HUYS</p>
+            <Logo />
             <Navbar activeTab="cart"/>
             <div className={styles.section}>
                 <div role="list" className={styles.cart}>
