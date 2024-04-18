@@ -21,6 +21,7 @@ export default function App() {
         <div className={styles.womanContainer}>
           <img src={coach} className={styles.woman}></img>
           <p className={styles.credit}>Photo by Godisable Jacob via <a href="https://www.pexels.com/photo/woman-sitting-on-sofa-bed-wearing-sunglasses-965324/" className={styles.link}>Pexels</a></p>
+          <Link to="/womens" className={styles.womanLink}>SHOP WOMENS</Link>
         </div>
         <div className={styles.womanContainer}>
           <img src={frendsmans} className={styles.woman}></img>
@@ -30,10 +31,7 @@ export default function App() {
         <img src={wendel} className={styles.woman}></img>
         <p className={styles.credit}>Photo by wendel moretti via <a href="https://www.pexels.com/photo/woman-wearing-black-sport-1972115/" className={styles.link}>Pexels</a></p>
         </div>
-        
       </div>
-      <Link to="/womens">SHOP WOMENS</Link>
-      
     </>
   )
 }
