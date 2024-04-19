@@ -1,0 +1,14 @@
+h2 {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.day,.hour,.minute,.second {
+    font-size: 3rem;
+}

@@ -9,12 +9,14 @@ import { Link } from "react-router-dom"
 import mens1 from "../../images/mens-1.jpg"
 import mens2 from "../../images/mens-2.jpg"
 import mens3 from "../../images/mens-3.jpg"
+import Countdown from "../Sale/Sale"
 
 export default function App() {
   return (
     <>
       <Logo />
       <Navbar activeTab='home'/>
+      <Countdown />
       <div className={styles.groundContainer}>
         <img src={ground} className={styles.ground}></img>
         <p className={styles.credit}>Photo by Lum3n via <a href="https://www.pexels.com/photo/low-angle-view-of-shoes-322207/" className={styles.link}>Pexels</a></p>
