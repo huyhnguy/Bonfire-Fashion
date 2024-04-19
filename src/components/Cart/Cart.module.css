@@ -50,6 +50,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "title title"
+        "discount discount"
     ;
     height: 15rem;
     margin-right: 2rem;
@@ -81,4 +82,35 @@ h4 {
 
 button {
     cursor: pointer;
+}
+
+.discountContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: discount;
+    grid-template-areas: 
+        "question arrow"
+        "input input";
+}
+
+.arrow {
+    justify-self: end;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-size: 1rem;
+    grid-area: arrow;
+}
+
+.discount {
+    cursor: pointer;
+    grid-area: question;
+}
+
+.inputContainer {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: input;
+    column-gap: 0.5rem;
 }

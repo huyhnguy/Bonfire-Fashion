@@ -4,6 +4,30 @@ import styles from "./Cart.module.css"
 import Logo from "../Logo/Logo";
 import Countdown from "../Sale/Sale";
 
+function Discount() {
+    const [discount, setDiscount] = useState(false)
+
+    function handleClick() {
+        if (discount === false) {
+            return setDiscount(true);
+        } else {
+            return setDiscount(false);
+        }
+    }
+
+    return(
+        <div className={styles.discountContainer}>
+            <p onClick={handleClick} className={styles.discount}>Discount code?</p>
+            {discount ? <p onClick={handleClick} className={styles.arrow}>&uarr;</p> : <p onClick={handleClick} className={styles.arrow}>&darr;</p>}
+            {discount && 
+                <div className={styles.inputContainer}>
+                    <input></input>
+                    <button>APPLY</button>
+                </div>}
+        </div>
+    )
+}
+
 function Summary({ subtotal }) {
     let shippingHandling;
     if (localStorage.length > 0) {
@@ -18,6 +42,7 @@ function Summary({ subtotal }) {
         <>
             <div className={styles.summary}>
                 <h1 className={styles.summaryTitle}>SUMMARY</h1>
+                <Discount />
                 <p>Subtotal:</p>
                 <p className={styles.price}>${(Math.round(subtotal * 100) / 100).toFixed(2)}</p>
                 <p>Shipping & Handling:</p>
