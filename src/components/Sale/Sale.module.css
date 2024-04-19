@@ -1,12 +1,13 @@
-h2 {
-    font-size: 5rem;
-    font-weight: bold;
+h1,h4 {
+    text-align: center;
 }
 
-.countdown {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
+.sale {
+    font-size: 4rem;
+}
+
+.emphasis {
+    color: red;
 }
 
 .day,.hour,.minute,.second {

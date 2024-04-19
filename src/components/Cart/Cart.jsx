@@ -2,6 +2,7 @@ import Navbar from "../Navbar/Navbar";
 import { useState, useEffect } from "react";
 import styles from "./Cart.module.css"
 import Logo from "../Logo/Logo";
+import Countdown from "../Sale/Sale";
 
 function Summary({ subtotal }) {
     let shippingHandling;
@@ -119,6 +120,7 @@ export default function Cart() {
         <>
             <Logo />
             <Navbar activeTab="cart"/>
+            <Countdown />
             <div className={styles.section}>
                 <div role="list" className={styles.cart}>
                     {products.length > 0 ? shoppingList : <p>Your cart is empty!</p>}

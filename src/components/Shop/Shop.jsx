@@ -4,6 +4,7 @@ import PopUp from "../Popup/Popup"
 import { useEffect, useState } from "react"
 import styles from "./Shop.module.css"
 import Logo from "../Logo/Logo"
+import Countdown from "../Sale/Sale"
 
 export default function Shop({ url, tab }) {
     const [products, setProducts] = useState(null);
@@ -53,6 +54,7 @@ export default function Shop({ url, tab }) {
             {popUpData && <PopUp data={popUpData} closeFunction={closePopUp}/>}
             <Logo />
             <Navbar activeTab={tab} />
+            <Countdown />
             <div className={styles.shop}>
                 { products &&
                     products.map(product => <Product data={product} key={product.id} handleClick={handleClick}/>)
