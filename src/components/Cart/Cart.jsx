@@ -16,7 +16,7 @@ function Summary({ subtotal }) {
     return(
         <>
             <div className={styles.summary}>
-                <h1 className={styles.summaryTitle}>Summary</h1>
+                <h1 className={styles.summaryTitle}>SUMMARY</h1>
                 <p>Subtotal:</p>
                 <p className={styles.price}>${(Math.round(subtotal * 100) / 100).toFixed(2)}</p>
                 <p>Shipping & Handling:</p>
@@ -103,8 +103,8 @@ export default function Cart() {
                 return (
                 <div key={product.id} role="listitem" className={styles.item}>
                     <img src={item.image} className={styles.image}></img>
-                    <p className={styles.text}>{item.title}</p>
-                    <p className={styles.text}>${(Math.round(itemTotal * 100) / 100).toFixed(2)}</p>
+                    <p className={styles.title}>{item.title}</p>
+                    <p className={styles.itemPrice}>${(Math.round(itemTotal * 100) / 100).toFixed(2)}</p>
                     <div className={styles.quantitybox}>
                         <label>Quantity:</label>
                         <input type="number" defaultValue={product.quantity} onChange={handleChange} className={styles.input}></input>
