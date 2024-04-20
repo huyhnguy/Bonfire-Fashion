@@ -4,6 +4,7 @@ import styles from "./Product.module.css"
 import { useState } from "react";
 
 export default function Product({ data, handleClick }) {
+    console.log(data);
     const [quantity, setQuantity] = useState(0);
     
     function handleIncrease(e) {
@@ -20,7 +21,7 @@ export default function Product({ data, handleClick }) {
     function handleChange(e) {
         setQuantity(e.target.value);
     }
-    
+
     return (
         <div className={styles.container}>
             <img src={data.image} className={styles.image}></img>

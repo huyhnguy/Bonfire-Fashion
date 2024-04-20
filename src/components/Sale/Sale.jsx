@@ -28,7 +28,7 @@ export default function Countdown() {
     return (
         <>
             <h1 className={styles.sale}>10% OFF SITEWIDE <span className={styles.emphasis}>{textDay}:{textHour}:{textMinute}:{textSecond}</span></h1>
-            <h4>Add discount code <span className={styles.emphasis}>'Huy'</span> before checkout</h4>
+            <h4>Add discount code <span className={styles.emphasis}>'HUYS'</span> before checkout</h4>
         </>
     )
 }

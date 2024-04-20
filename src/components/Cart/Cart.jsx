@@ -4,8 +4,9 @@ import styles from "./Cart.module.css"
 import Logo from "../Logo/Logo";
 import Countdown from "../Sale/Sale";
 
-function Discount() {
-    const [discount, setDiscount] = useState(false)
+function Discount({ applyDiscount }) {
+    const [discount, setDiscount] = useState(false);
+    let code;
 
     function handleClick() {
         if (discount === false) {
@@ -21,30 +22,49 @@ function Discount() {
             {discount ? <p onClick={handleClick} className={styles.arrow}>&uarr;</p> : <p onClick={handleClick} className={styles.arrow}>&darr;</p>}
             {discount && 
                 <div className={styles.inputContainer}>
-                    <input></input>
-                    <button>APPLY</button>
+                    <input onChange={(e) => code = e.target.value}></input>
+                    <button onClick={() => {
+                        applyDiscount(code)
+                        setDiscount(false);
+                    }}>APPLY</button>
                 </div>}
         </div>
     )
 }
 
 function Summary({ subtotal }) {
+    const [discount, setDiscount] = useState(0);
+
     let shippingHandling;
     if (localStorage.length > 0) {
         shippingHandling = 8;
     } else {
         shippingHandling = 0;
     }
-    let tax = (subtotal + shippingHandling) * 0.0825;
-    let total = subtotal + shippingHandling + tax;
+    let tax = (subtotal - discount + shippingHandling) * 0.0825;
+    let total = subtotal - discount + shippingHandling + tax;
+
+    function applyDiscount(code) {
+        if (code === "HUYS") {
+            setDiscount(subtotal * 0.1);
+            console.log(discount);
+        } else {
+            console.log(`code is ${code}`);
+        }
+    }
 
     return(
         <>
             <div className={styles.summary}>
                 <h1 className={styles.summaryTitle}>SUMMARY</h1>
-                <Discount />
+                <Discount applyDiscount={applyDiscount}/>
                 <p>Subtotal:</p>
                 <p className={styles.price}>${(Math.round(subtotal * 100) / 100).toFixed(2)}</p>
+                {discount > 0 &&
+                    <>
+                        <p>Discount:</p>
+                        <h4 className={styles.discountValue}>-${(Math.round(discount * 100) / 100).toFixed(2)}</h4>
+                    </>}
                 <p>Shipping & Handling:</p>
                 <p className={styles.price}>${shippingHandling.toFixed(2)}</p>
                 <p>Tax:</p>
