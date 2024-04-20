@@ -6,12 +6,17 @@ import Countdown from "../Sale/Sale";
 
 function Discount({ applyDiscount }) {
     const [discount, setDiscount] = useState(false);
+    const [invalid, setInvalid] = useState(false);
     let code;
 
     function handleClick() {
         if (discount === false) {
             return setDiscount(true);
         } else {
+            if(invalid === true) {
+                setInvalid(false);
+            }
+            
             return setDiscount(false);
         }
     }
@@ -24,10 +29,19 @@ function Discount({ applyDiscount }) {
                 <div className={styles.inputContainer}>
                     <input onChange={(e) => code = e.target.value}></input>
                     <button onClick={() => {
-                        applyDiscount(code)
-                        setDiscount(false);
+                        if (code === 'HUYS') {
+                            applyDiscount(code);
+                            setDiscount(false);
+                            if (invalid === true) {
+                                setInvalid(false);
+                            }
+                        } else {
+                            setInvalid(true);
+                        }
+
                     }}>APPLY</button>
                 </div>}
+            {invalid && <p className={styles.invalid}>Invalid code</p>}
         </div>
     )
 }
