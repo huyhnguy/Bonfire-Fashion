@@ -5,7 +5,7 @@
 }
 
 .emphasis {
-    color: red;
+    font-weight: 800;
 }
 
 .day,.hour,.minute,.second {
@@ -13,7 +13,7 @@
 }
 
 .container {
-    background-color: rgb(55, 55, 203);
+    background-color: #647494;
     color: white;
     padding: 5px 0 5px 0;
 }

@@ -1,7 +1,6 @@
 import Navbar from "../Navbar/Navbar";
 import { useState, useEffect } from "react";
 import styles from "./Cart.module.css"
-import Logo from "../Logo/Logo";
 import Countdown from "../Sale/Sale";
 
 function Discount({ applyDiscount }) {
@@ -47,7 +46,7 @@ function Discount({ applyDiscount }) {
 }
 
 function Summary({ subtotal }) {
-    const [discount, setDiscount] = useState(false);
+    const [discount, setDiscount] = useState(0);
 
     let shippingHandling;
     if (localStorage.length > 0) {
@@ -55,13 +54,12 @@ function Summary({ subtotal }) {
     } else {
         shippingHandling = 0;
     }
-    let discountValue = (subtotal * 0.1);
     let tax = (subtotal - discount + shippingHandling) * 0.0825;
     let total = subtotal - discount + shippingHandling + tax;
 
     function applyDiscount(code) {
         if (code === "HUYS") {
-            setDiscount(true);
+            setDiscount(subtotal * 0.1);
         } else {
             console.log(`code is ${code}`);
         }
@@ -77,7 +75,7 @@ function Summary({ subtotal }) {
                 {discount > 0 &&
                     <>
                         <p>Discount:</p>
-                        <h4 className={styles.discountValue}>-${(Math.round(discountValue * 100) / 100).toFixed(2)}</h4>
+                        <h4 className={styles.discountValue}>-${(Math.round(discount * 100) / 100).toFixed(2)}</h4>
                     </>}
                 <p>Shipping & Handling:</p>
                 <p className={styles.price}>${shippingHandling.toFixed(2)}</p>
@@ -178,7 +176,6 @@ export default function Cart() {
         return (
         <>
             <Countdown />
-            <Logo />
             <Navbar activeTab="cart"/>
             <div className={styles.section}>
                 <div role="list" className={styles.cart}>

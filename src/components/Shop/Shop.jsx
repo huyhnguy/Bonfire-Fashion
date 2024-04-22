@@ -53,7 +53,6 @@ export default function Shop({ url, tab }) {
         <>
             {popUpData && <PopUp data={popUpData} closeFunction={closePopUp}/>}
             <Countdown />
-            <Logo />
             <Navbar activeTab={tab} />
             <div className={styles.shop}>
                 { products &&

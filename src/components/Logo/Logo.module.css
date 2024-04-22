@@ -1,14 +1,15 @@
 .title {
-    font-family: "Kanit", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 8rem;
-    margin: 0 2rem 0 2rem;
+    font-family: "Shrikhand", serif;
+    font-size: 3rem;
     border: none;
     padding: 0;
+    color:#647494;
+    
 }
 
 .title:hover {
-    background-color: white;
-    color: black;
+    background-color: transparent;
+    cursor:pointer;
+    color: #647494;
+    transform: scale(1.025);
 }

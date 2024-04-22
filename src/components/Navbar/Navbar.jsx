@@ -1,23 +1,19 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import styles from "./Navbar.module.css"
+import Logo from "../Logo/Logo"
+import cart from "../../images/cart.svg"
+
 
 function Tab({ tabname, path, active }) {
-    if (active != undefined) {
-        return (
-            <div>
-                <Link to={path} className={styles.active}>{tabname}</Link>
-            </div>
-        )
-    } else {
-        return (
-            <div>
-                <Link to={path}>{tabname}</Link>
-            </div>
-        )
-    }
+    return (
+        <div>
+            {active != undefined ? <Link to={path} className={styles.active}>{tabname}</Link> :
+                <Link to={path}>{tabname}</Link>}
+        </div>
+    )
 };
 
-function CartTab({ tabname, path, active }) {
+function CartTab({ active }) {
     let totalQuantity = 0;
     
     for (let i = 0; i < localStorage.length; i++) {
@@ -25,87 +21,31 @@ function CartTab({ tabname, path, active }) {
         totalQuantity = totalQuantity + itemQuantity;
     }
 
-    if (active != undefined) {
-        return (
-            <div>
-                <Link to={path} className={styles.active}>{tabname} ({totalQuantity})</Link>
-            </div>
-        )
-    } else {
-        return (
-            <div>
-                <Link to={path}>{tabname} ({totalQuantity})</Link>
-            </div>
-        )
+    let navigate = useNavigate();
+    function handleClick() {
+        let path = "/cart";
+        navigate(path);
     }
+
+    return (
+        <div>
+            <img src={cart} className={styles.cart} onClick={handleClick}></img> 
+            {totalQuantity > 0 && <div className={styles.dot}>{totalQuantity}</div>}
+        </div>  
+    )
 }
 
 export default function Navbar({ activeTab }) {
-    if (activeTab === "home") {
-        return (
-            <div role="navigation" className={styles.navigation}>
-                <Tab tabname= "HOME" path= "/" role="link" active="active" />
-                <Tab tabname= "MENS" path= "/mens" role="link" />
-                <Tab tabname= "WOMENS" path= "/womens" role= "link" />
-                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
-                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" />
-                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link"/>
+    return (
+        <div role="navigation" className={styles.navigation}>
+            <Logo />
+            <div className={styles.categories}>
+                { activeTab === 'mens' ? <Tab tabname= "MENS" path= "/mens" role="link" active="active"/> : <Tab tabname= "MENS" path= "/mens" role="link" /> }
+                { activeTab === 'womens' ? <Tab tabname= "WOMENS" path= "/womens" role= "link" active="active" /> :<Tab tabname= "WOMENS" path= "/womens" role= "link" /> }
+                { activeTab === 'jewelry' ? <Tab tabname= "JEWELRY" path= "/jewelry" role="link" active="active" /> :<Tab tabname= "JEWELRY" path= "/jewelry" role="link" /> }
+                { activeTab === 'electronics' ? <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" active="active" /> :<Tab tabname= "ELECTRONICS" path= "/electronics" role="link" /> }
             </div>
-        )
-    } else if (activeTab === 'mens') {
-        return (
-            <div role="navigation" className={styles.navigation}>
-                <Tab tabname= "HOME" path= "/" role="link" />
-                <Tab tabname= "MENS" path= "/mens" role="link" active="active"/>
-                <Tab tabname= "WOMENS" path= "/womens" role= "link" />
-                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
-                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" />
-                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" />
-            </div>
-        )
-    } else if (activeTab === 'womens') {
-        return (
-            <div role="navigation" className={styles.navigation}>
-                <Tab tabname= "HOME" path= "/" role="link" />
-                <Tab tabname= "MENS" path= "/mens" role="link" />
-                <Tab tabname= "WOMENS" path= "/womens" role= "link" active="active" />
-                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
-                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" />
-                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" />
-            </div>
-        )
-    } else if (activeTab === 'electronics') {
-        return (
-            <div role="navigation" className={styles.navigation}>
-                <Tab tabname= "HOME" path= "/" role="link" />
-                <Tab tabname= "MENS" path= "/mens" role="link" />
-                <Tab tabname= "WOMENS" path= "/womens" role= "link" />
-                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
-                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" active="active" />
-                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" />
-            </div>
-        )
-    } else if (activeTab === 'jewelry') {
-        return (
-            <div role="navigation" className={styles.navigation}>
-                <Tab tabname= "HOME" path= "/" role="link" />
-                <Tab tabname= "MENS" path= "/mens" role="link" />
-                <Tab tabname= "WOMENS" path= "/womens" role= "link" />
-                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" active="active" />
-                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" />
-                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" />
-            </div>
-        )
-    } else if (activeTab === 'cart') {
-        return (
-            <div role="navigation" className={styles.navigation}>
-                <Tab tabname= "HOME" path= "/" role="link" />
-                <Tab tabname= "MENS" path= "/mens" role="link" />
-                <Tab tabname= "WOMENS" path= "/womens" role= "link" />
-                <Tab tabname= "JEWELRY" path= "/jewelry" role="link" />
-                <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" />
-                <CartTab tabname= "SHOPPING CART" path= "/cart" role="link" active="active" />
-            </div>
-        )
-    }
+            { activeTab === 'cart' ? <CartTab role="link" active="active" /> :<CartTab role="link"/> }
+        </div>
+    )
 }

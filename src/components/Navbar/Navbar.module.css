@@ -1,7 +1,19 @@
 .navigation {
     display: flex;
     gap: 1rem;
-    margin: 0rem 2rem 2rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+.categories {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 a {
@@ -13,10 +25,28 @@ a {
 
 a:hover {
     color: white;
-    background-color: black;
+    background-color:#647494;
+    border-color:#647494;
 }
 
 .active {
     font-weight: 700;
+    border-width: 2px;
+}
+
+.cart {
+    height: 2rem;
+}
+
+.dot {
+    width: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #647494;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 30px;
 }
   

@@ -15,7 +15,6 @@ export default function App() {
   return (
     <>
       <Countdown />
-      <Logo />
       <Navbar activeTab='home'/>
       <div className={styles.groundContainer}>
         <img src={ground} className={styles.ground}></img>
