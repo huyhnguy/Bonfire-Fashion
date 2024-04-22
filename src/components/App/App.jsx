@@ -14,9 +14,9 @@ import Countdown from "../Sale/Sale"
 export default function App() {
   return (
     <>
+      <Countdown />
       <Logo />
       <Navbar activeTab='home'/>
-      <Countdown />
       <div className={styles.groundContainer}>
         <img src={ground} className={styles.ground}></img>
         <p className={styles.credit}>Photo by Lum3n via <a href="https://www.pexels.com/photo/low-angle-view-of-shoes-322207/" className={styles.link}>Pexels</a></p>

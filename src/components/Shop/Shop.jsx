@@ -52,9 +52,9 @@ export default function Shop({ url, tab }) {
     return (
         <>
             {popUpData && <PopUp data={popUpData} closeFunction={closePopUp}/>}
+            <Countdown />
             <Logo />
             <Navbar activeTab={tab} />
-            <Countdown />
             <div className={styles.shop}>
                 { products &&
                     products.map(product => <Product data={product} key={product.id} handleClick={handleClick}/>)

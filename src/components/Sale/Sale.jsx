@@ -26,9 +26,8 @@ export default function Countdown() {
     const textSecond = Math.floor((gap % minute) / second);
 
     return (
-        <>
-            <h1 className={styles.sale}>10% OFF SITEWIDE <span className={styles.emphasis}>{textDay}:{textHour}:{textMinute}:{textSecond}</span></h1>
-            <h4>Add discount code <span className={styles.emphasis}>'HUYS'</span> before checkout</h4>
-        </>
+        <div className={styles.container}>
+            <p className={styles.sale}>10% OFF SITEWIDE! Use code 'HUYS' before checkout. {textDay}:{textHour}:{textMinute}:{textSecond}</p>
+        </div>
     )
 }

@@ -101,7 +101,7 @@ button {
     color: red;
     grid-area: 3/ 1 / 4 / 4;
     text-align: center;
-    animation: animate  0.5s linear 3; 
+    animation: animate  0.35s linear 3; 
 }
 
 @keyframes animate { 

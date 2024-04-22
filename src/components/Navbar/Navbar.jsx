@@ -19,6 +19,7 @@ function Tab({ tabname, path, active }) {
 
 function CartTab({ tabname, path, active }) {
     let totalQuantity = 0;
+    
     for (let i = 0; i < localStorage.length; i++) {
         const itemQuantity = Number(localStorage[i].substring(localStorage[i].indexOf('-') + 1));
         totalQuantity = totalQuantity + itemQuantity;

@@ -1,9 +1,7 @@
-h1,h4 {
-    text-align: center;
-}
-
 .sale {
-    font-size: 4rem;
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
 }
 
 .emphasis {
@@ -12,4 +10,10 @@ h1,h4 {
 
 .day,.hour,.minute,.second {
     font-size: 3rem;
+}
+
+.container {
+    background-color: rgb(55, 55, 203);
+    color: white;
+    padding: 5px 0 5px 0;
 }
