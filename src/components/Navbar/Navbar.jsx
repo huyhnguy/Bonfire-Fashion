@@ -28,7 +28,7 @@ function CartTab({ active }) {
     }
 
     return (
-        <div>
+        <div className={styles.cartContainer}>
             <img src={cart} className={styles.cart} onClick={handleClick}></img> 
             {totalQuantity > 0 && <div className={styles.dot}>{totalQuantity}</div>}
         </div>  
