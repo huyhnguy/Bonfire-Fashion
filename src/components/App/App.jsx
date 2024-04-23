@@ -11,12 +11,15 @@ import mens2 from "../../images/mens-2.jpg"
 import mens3 from "../../images/mens-3.jpg"
 import Countdown from "../Sale/Sale"
 import Hyperlinks from "../Hyperlinks/Hyperlinks"
+import Copyright from "../Copyright/Copyright"
+import Slideshow from "../Slideshow/Slideshow"
 
 export default function App() {
   return (
     <>
       <Countdown />
       <Navbar activeTab='home'/>
+      <Slideshow />
       <div className={styles.groundContainer}>
         <img src={ground} className={styles.ground}></img>
         <p className={styles.credit}>Photo by Lum3n via <a href="https://www.pexels.com/photo/low-angle-view-of-shoes-322207/" className={styles.link}>Pexels</a></p>
@@ -54,6 +57,7 @@ export default function App() {
         </div>
       </div>
       <Hyperlinks />
+      <Copyright />
     </>
   )
 }
