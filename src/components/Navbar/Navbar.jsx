@@ -13,7 +13,7 @@ function Tab({ tabname, path, active }) {
     )
 };
 
-function CartTab({ active }) {
+function CartTab() {
     let totalQuantity = 0;
     
     for (let i = 0; i < localStorage.length; i++) {
@@ -45,7 +45,7 @@ export default function Navbar({ activeTab }) {
                 { activeTab === 'jewelry' ? <Tab tabname= "JEWELRY" path= "/jewelry" role="link" active="active" /> :<Tab tabname= "JEWELRY" path= "/jewelry" role="link" /> }
                 { activeTab === 'electronics' ? <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" active="active" /> :<Tab tabname= "ELECTRONICS" path= "/electronics" role="link" /> }
             </div>
-            { activeTab === 'cart' ? <CartTab role="link" active="active" /> :<CartTab role="link"/> }
+            <CartTab role="link"/>
         </div>
     )
 }

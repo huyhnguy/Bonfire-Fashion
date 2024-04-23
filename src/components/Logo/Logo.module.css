@@ -9,7 +9,7 @@
 
 .title:hover {
     background-color: transparent;
-    cursor:pointer;
+    cursor: pointer;
     color: #647494;
     transform: scale(1.025);
 }

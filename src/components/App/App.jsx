@@ -10,6 +10,7 @@ import mens1 from "../../images/mens-1.jpg"
 import mens2 from "../../images/mens-2.jpg"
 import mens3 from "../../images/mens-3.jpg"
 import Countdown from "../Sale/Sale"
+import Hyperlinks from "../Hyperlinks/Hyperlinks"
 
 export default function App() {
   return (
@@ -52,6 +53,7 @@ export default function App() {
         <p className={styles.credit}>Photo by Visión De Enfoque via <a href="https://www.pexels.com/photo/man-with-braided-hair-in-yellow-outfit-3341231/" className={styles.link}>Pexels</a></p>
         </div>
       </div>
+      <Hyperlinks />
     </>
   )
 }
