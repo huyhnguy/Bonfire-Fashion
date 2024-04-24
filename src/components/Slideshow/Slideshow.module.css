@@ -12,8 +12,11 @@
 }
 
 .newPhoto {
+    display: flex;
     position: absolute;
     right: 0%;
+    top: 0%;
+    width: 100%;
 }
 
 .left, .right {
@@ -59,4 +62,29 @@
 .fadeOut {
     animation: fadeOutAnimation ease 1.5s;
     animation-fill-mode: forwards;
+}
+
+.link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+    border: none;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    display: flex;
+}
+
+.credit {
+    text-align:center;
+    margin: 0;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: white;
+    padding: 5px;
+    font-size: 0.75rem;
+    animation: fadeInAnimation ease 1.5s;
 }
