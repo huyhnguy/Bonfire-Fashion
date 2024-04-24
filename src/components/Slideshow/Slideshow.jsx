@@ -1,17 +1,24 @@
 import styles from "./Slideshow.module.css"
 import right from "../../images/right.svg"
 import left from "../../images/left.svg"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import zero from "../../images/slideshow-0.jpg"
 import one from "../../images/slideshow-1.jpg"
 import two from "../../images/slideshow-2.jpg"
 import three from "../../images/slideshow-3.jpg"
 import four from "../../images/slideshow-4.jpg"
 
+
 export default function Slideshow() {
     const [activePhoto, setActivePhoto] = useState(0);
     const [direction, setDirection] = useState(undefined);
     const imageArray = [zero, one, two, three, four];
+
+    useEffect(() => {
+        setTimeout(() => {
+            handleRight();
+        }, 3000);
+    }, [activePhoto]);
 
     function handleRight() {
         setDirection('forward');
