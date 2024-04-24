@@ -108,11 +108,13 @@ export default function Slideshow() {
     const [direction, setDirection] = useState(undefined);
     const imageArray = [zero, one, two, three, four];
 
-    /*useEffect(() => {
-        setTimeout(() => {
+    useEffect(() => {
+        let timer = setTimeout(() => {
             handleRight();
         }, 5000);
-    }, [activePhoto]);*/
+
+        return () => clearTimeout(timer)
+    }, [activePhoto]);
 
     function handleRight() {
         setDirection('forward');
@@ -153,15 +155,15 @@ export default function Slideshow() {
             }
             {activePhoto != 4 && direction === 'backward' &&
                 <>
-                    <img key={activePhoto + 1} src={imageArray[activePhoto + 1]} className={`${styles.photo} ${styles.fadeOut}`}></img>
-                    <img key={activePhoto} src={imageArray[activePhoto]} className={`${styles.photo} ${styles.newPhoto}`}></img>
+                    <Image photoNumber={activePhoto + 1} position='old' />
+                    <Image photoNumber={activePhoto} position='new' />
                 </> 
             }
             {activePhoto === 4 && direction === 'backward' &&
                 <>
-                    <img key={0} src={imageArray[0]} className={`${styles.photo} ${styles.fadeOut}`}></img>
-                    <img key={4} src={imageArray[4]} className={`${styles.photo} ${styles.newPhoto}`}></img>
-                </>
+                    <Image photoNumber={0} position='old' />
+                    <Image photoNumber={activePhoto} position='new' />
+                </> 
             }
             <img src={right} className={styles.right} onClick={handleRight}></img>
             <img src={left} className={styles.left} onClick={handleLeft}></img>
