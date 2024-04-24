@@ -1,7 +1,5 @@
 import Navbar from "../Navbar/Navbar"
 import styles from "./App.module.css"
-import ground from "../../images/clothing-on-ground.jpg"
-import Logo from "../Logo/Logo"
 import coach from "../../images/woman-coach.jpg"
 import frendsmans from "../../images/frendsmans.jpg"
 import wendel from "../../images/wendel.jpg"
@@ -20,10 +18,6 @@ export default function App() {
       <Countdown />
       <Navbar activeTab='home'/>
       <Slideshow />
-      <div className={styles.groundContainer}>
-        <img src={ground} className={styles.ground}></img>
-        <p className={styles.credit}>Photo by Lum3n via <a href="https://www.pexels.com/photo/low-angle-view-of-shoes-322207/" className={styles.link}>Pexels</a></p>
-      </div>
       <p className={styles.text}>TRENDY</p>
       <div className={styles.womens}>
         <div className={styles.womanContainer}>
