@@ -2,6 +2,9 @@ import Navbar from "../Navbar/Navbar";
 import { useState, useEffect } from "react";
 import styles from "./Cart.module.css"
 import Countdown from "../Sale/Sale";
+import Copyright from "../Copyright/Copyright";
+import Signup from "../Signup/Signup";
+import Hyperlinks from "../Hyperlinks/Hyperlinks";
 
 function Discount({ applyDiscount }) {
     const [discount, setDiscount] = useState(false);
@@ -183,6 +186,9 @@ export default function Cart() {
                 </div>
                 <Summary subtotal={subtotal}/>
             </div>
+            <Signup />
+            <Hyperlinks />
+            <Copyright />
         </>
         )
 }

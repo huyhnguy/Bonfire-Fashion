@@ -5,6 +5,9 @@ import { useEffect, useState } from "react"
 import styles from "./Shop.module.css"
 import Logo from "../Logo/Logo"
 import Countdown from "../Sale/Sale"
+import Signup from "../Signup/Signup"
+import Copyright from "../Copyright/Copyright"
+import Hyperlinks from "../Hyperlinks/Hyperlinks"
 
 export default function Shop({ url, tab }) {
     const [products, setProducts] = useState(null);
@@ -59,6 +62,9 @@ export default function Shop({ url, tab }) {
                     products.map(product => <Product data={product} key={product.id} handleClick={handleClick}/>)
                 }
             </div>
+            <Signup />
+            <Hyperlinks />
+            <Copyright />
         </>
     )
 }
