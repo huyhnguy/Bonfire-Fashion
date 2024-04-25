@@ -32,9 +32,11 @@ export default function App() {
             <p className={styles.credit}>Photo by Brooke Cagle via <a href="https://unsplash.com/photos/man-standing-on-road-between-sand-7iTE5rhI6lc" className={styles.link}>Unsplash</a></p>
           </div>
         </div>
-        <h2 className={styles.panelText}>Comfort and style</h2>
+        <h1 className={styles.panelText}>Comfort and style</h1>
         <p className={styles.panelText}>Casual pieces made for you to look and feel your best everywhere you go. </p>
-        <button className={styles.panelText}>Shop Mens</button>
+        <button className={styles.panelText}>
+          <Link to="/mens">Shop Mens</Link>
+        </button>
       </section>
       
       <p className={styles.text}>TRENDY</p>

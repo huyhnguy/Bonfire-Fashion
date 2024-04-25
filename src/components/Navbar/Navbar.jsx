@@ -7,8 +7,8 @@ import cart from "../../images/cart.svg"
 function Tab({ tabname, path, active }) {
     return (
         <div>
-            {active != undefined ? <Link to={path} className={styles.active}>{tabname}</Link> :
-                <Link to={path}>{tabname}</Link>}
+            {active != undefined ? <Link to={path} className={`${styles.tab} ${styles.active}`}>{tabname}</Link> :
+                <Link className={styles.tab} to={path}>{tabname}</Link>}
         </div>
     )
 };
