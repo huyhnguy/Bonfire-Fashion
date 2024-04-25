@@ -30,9 +30,8 @@ a {
 
 a:hover {
     color: white;
-    background-color:#647494;
-    border-color:#647494;
-    transition: 0.3s;
+    background-color:black;
+    border-color:black;
 }
 
 .active {

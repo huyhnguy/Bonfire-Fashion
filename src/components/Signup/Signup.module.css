@@ -3,6 +3,7 @@
     align-items: center;
     gap: 1rem;
     justify-content: center;
+    padding: 2rem 0 2rem 0;
 }
 
 .button {
@@ -22,4 +23,9 @@
 
 .button:active {
     background-color:#2e3442;
+}
+
+.input {
+    padding: 1rem 0.25rem 1rem 0.25rem;
+    width: 15rem;
 }
