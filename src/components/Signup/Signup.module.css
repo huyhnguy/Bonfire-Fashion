@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.button {
+    background-color: #647494;
+    color: white;
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+    padding: 1rem;
+    font: inherit;
+    font-weight: 700;
+}
+
+.button:hover {
+    background-color: #465167;
+}
+
+.button:active {
+    background-color:#2e3442;
+}

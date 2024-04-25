@@ -72,13 +72,13 @@ function Image({ photoNumber, position = undefined }) {
                     {position === 'new' && 
                         <div key={3} className={styles.newPhoto}>
                             <img src={imageArray[3]} className={styles.photo}></img>
-                            <p className={styles.credit}>Photo by James Marty <a href="https://unsplash.com/photos/man-wearing-denim-sport-shirt-and-sunglasses-on-concrete-flooring-h1BuNJZzpC8" className={styles.link}>Unsplash</a></p>
+                            <p className={styles.credit}>Photo by James Marty via <a href="https://unsplash.com/photos/man-wearing-denim-sport-shirt-and-sunglasses-on-concrete-flooring-h1BuNJZzpC8" className={styles.link}>Unsplash</a></p>
                         </div>
                     }
                     {position === 'old' && 
                         <div key={3} className={styles.container}>
                             <img src={imageArray[3]} className={`${styles.photo} ${styles.fadeOut}`}></img>
-                            <p className={styles.credit}>Photo by James Marty <a href="https://unsplash.com/photos/man-wearing-denim-sport-shirt-and-sunglasses-on-concrete-flooring-h1BuNJZzpC8" className={styles.link}>Unsplash</a></p>
+                            <p className={styles.credit}>Photo by James Marty via <a href="https://unsplash.com/photos/man-wearing-denim-sport-shirt-and-sunglasses-on-concrete-flooring-h1BuNJZzpC8" className={styles.link}>Unsplash</a></p>
                         </div>
                     }           
                 </>
@@ -88,13 +88,13 @@ function Image({ photoNumber, position = undefined }) {
                     {position === 'new' && 
                         <div key={4} className={styles.newPhoto}>
                             <img src={imageArray[4]} className={styles.photo}></img>
-                            <p className={styles.credit}>Photo by josh Dago <a href="https://www.pexels.com/photo/a-woman-wearing-a-necklace-with-two-gold-pendants-22392076/" className={styles.link}>Pexel</a></p>
+                            <p className={styles.credit}>Photo by josh Dago via <a href="https://www.pexels.com/photo/a-woman-wearing-a-necklace-with-two-gold-pendants-22392076/" className={styles.link}>Pexel</a></p>
                         </div>
                     }
                     {position === 'old' && 
                         <div key={4} className={styles.container}>
                             <img src={imageArray[4]} className={`${styles.photo} ${styles.fadeOut}`}></img>
-                            <p className={styles.credit}>Photo by josh Dago <a href="https://www.pexels.com/photo/a-woman-wearing-a-necklace-with-two-gold-pendants-22392076/" className={styles.link}>Pexel</a></p>
+                            <p className={styles.credit}>Photo by josh Dago via <a href="https://www.pexels.com/photo/a-woman-wearing-a-necklace-with-two-gold-pendants-22392076/" className={styles.link}>Pexel</a></p>
                         </div>
                     }           
                 </>
@@ -106,7 +106,6 @@ function Image({ photoNumber, position = undefined }) {
 export default function Slideshow() {
     const [activePhoto, setActivePhoto] = useState(0);
     const [direction, setDirection] = useState(undefined);
-    const imageArray = [zero, one, two, three, four];
 
     useEffect(() => {
         let timer = setTimeout(() => {

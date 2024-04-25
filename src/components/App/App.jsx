@@ -11,6 +11,7 @@ import Countdown from "../Sale/Sale"
 import Hyperlinks from "../Hyperlinks/Hyperlinks"
 import Copyright from "../Copyright/Copyright"
 import Slideshow from "../Slideshow/Slideshow"
+import Signup from "../Signup/Signup"
 
 export default function App() {
   return (
@@ -50,6 +51,7 @@ export default function App() {
         <p className={styles.credit}>Photo by Visión De Enfoque via <a href="https://www.pexels.com/photo/man-with-braided-hair-in-yellow-outfit-3341231/" className={styles.link}>Pexels</a></p>
         </div>
       </div>
+      <Signup />
       <Hyperlinks />
       <Copyright />
     </>
