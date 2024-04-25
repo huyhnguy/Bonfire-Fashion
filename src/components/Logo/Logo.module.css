@@ -3,14 +3,13 @@
     font-size: 3rem;
     border: none;
     padding: 0;
-    color:#647494;
+    color:#f0544d;
     
 }
 
 .title:hover {
     background-color: transparent;
     cursor: pointer;
-    color: #647494;
     transform: scale(1.025);
     transition: 0.3s;
 }

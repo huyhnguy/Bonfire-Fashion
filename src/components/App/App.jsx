@@ -3,7 +3,7 @@ import styles from "./App.module.css"
 import coach from "../../images/woman-coach.jpg"
 import frendsmans from "../../images/frendsmans.jpg"
 import wendel from "../../images/wendel.jpg"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import mens1 from "../../images/mens-1.jpg"
 import mens2 from "../../images/mens-2.jpg"
 import mens3 from "../../images/mens-3.jpg"
@@ -16,6 +16,14 @@ import man0 from "../../images/man-0.jpg"
 import man1 from "../../images/man-1.jpg"
 
 export default function App() {
+  
+  let navigate = useNavigate(); 
+
+  function handleMens() {
+    let path = `/mens`; 
+    navigate(path);
+  }
+
   return (
     <>
       <Countdown />
@@ -34,9 +42,7 @@ export default function App() {
         </div>
         <h1 className={styles.panelText}>Comfort and style</h1>
         <p className={styles.panelText}>Casual pieces made for you to look and feel your best everywhere you go. </p>
-        <button className={styles.panelText}>
-          <Link to="/mens">Shop Mens</Link>
-        </button>
+        <button className={styles.panelText} onClick={handleMens}>Shop Mens</button>
       </section>
       
       <p className={styles.text}>TRENDY</p>

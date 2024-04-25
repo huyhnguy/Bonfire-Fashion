@@ -33,6 +33,11 @@
     top: -10px;
     right: 0px;
     padding: 0;
+    color: black;
+}
+
+.close:hover {
+    background: none;
 }
 
 h1 {
@@ -91,4 +96,7 @@ p{
     text-align: center;
     margin-top: 0.75rem;
     display:block;
+    color: black;
+    border: solid;
+    padding: 1rem 0 1rem 0;
 }

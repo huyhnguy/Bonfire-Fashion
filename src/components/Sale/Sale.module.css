@@ -2,6 +2,7 @@
     font-size: 1rem;
     margin: 0;
     text-align: center;
+    color: white;
 }
 
 .emphasis {
@@ -13,7 +14,6 @@
 }
 
 .container {
-    background-color: #647494;
-    color: white;
+    background-color: #f0544d;
     padding: 5px 0 5px 0;
 }

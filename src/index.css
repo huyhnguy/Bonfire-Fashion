@@ -26,7 +26,7 @@ body {
 }
 
 button {
-  background-color: #647494;
+  background-color: #f0544d;
   color: white;
   border-radius: 5px;
   box-shadow: none;
@@ -37,11 +37,11 @@ button {
 }
 
 button:hover {
-  background-color: #465167;
+  background-color: #bd433c;
 }
 
 button:active {
-  background-color: #2e3442;
+  background-color: #822f2a;
 }
 
 a {
