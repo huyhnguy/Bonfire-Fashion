@@ -12,6 +12,8 @@ import Hyperlinks from "../Hyperlinks/Hyperlinks"
 import Copyright from "../Copyright/Copyright"
 import Slideshow from "../Slideshow/Slideshow"
 import Signup from "../Signup/Signup"
+import man0 from "../../images/man-0.jpg"
+import man1 from "../../images/man-1.jpg"
 
 export default function App() {
   return (
@@ -19,6 +21,21 @@ export default function App() {
       <Countdown />
       <Navbar activeTab='home'/>
       <Slideshow />
+      <section>
+        <div className={styles.mensPanel}>
+          <div className={styles.manContainer}>
+            <img src={man0} className={styles.man0}></img>
+            <p className={styles.credit}>Photo by Karl Fredrickson via <a href="https://unsplash.com/photos/man-standing-facing-mountains-during-sunset-DsAjH9B24G8" className={styles.link}>Unsplash</a></p>
+          </div>
+          <div className={styles.manContainer}>
+            <img src={man1} className={styles.man1}></img>
+            <p className={styles.credit}>Photo by Brooke Cagle via <a href="https://unsplash.com/photos/man-standing-on-road-between-sand-7iTE5rhI6lc" className={styles.link}>Unsplash</a></p>
+          </div>
+        </div>
+        <h2 className={styles.panelText}>Comfort and style</h2>
+        <p className={styles.panelText}>Casual pieces made for you to look and feel your best everywhere you go. </p>
+      </section>
+      
       <p className={styles.text}>TRENDY</p>
       <div className={styles.womens}>
         <div className={styles.womanContainer}>
