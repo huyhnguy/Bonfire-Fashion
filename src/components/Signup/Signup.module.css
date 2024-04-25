@@ -6,7 +6,7 @@
     padding: 2rem 0 2rem 0;
 }
 
-.button {
+button {
     background-color: #647494;
     color: white;
     border-radius: 5px;
@@ -17,11 +17,11 @@
     font-weight: 700;
 }
 
-.button:hover {
+button:hover {
     background-color: #465167;
 }
 
-.button:active {
+button:active {
     background-color: #2e3442;
 }
 

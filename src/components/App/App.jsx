@@ -34,6 +34,7 @@ export default function App() {
         </div>
         <h2 className={styles.panelText}>Comfort and style</h2>
         <p className={styles.panelText}>Casual pieces made for you to look and feel your best everywhere you go. </p>
+        <button className={styles.panelText}>Shop Mens</button>
       </section>
       
       <p className={styles.text}>TRENDY</p>
