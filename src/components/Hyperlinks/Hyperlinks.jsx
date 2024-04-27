@@ -5,7 +5,7 @@ export default function Hyperlinks() {
         <section className={styles.hyperlinks}>
             <div>
                 <h2>About Us</h2>
-                <p className={styles.hyperlink}>Our story</p>
+                <p className={styles.hyperlink}>Our Story</p>
                 <p className={styles.hyperlink}>Careers</p>
                 <p className={styles.hyperlink}>Diversity, Equity, and Inclusion</p>
                 <p className={styles.hyperlink}>Get Email Updates</p>

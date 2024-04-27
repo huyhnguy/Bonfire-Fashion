@@ -71,7 +71,7 @@ function Summary({ subtotal }) {
     return(
         <>
             <div className={styles.summary}>
-                <h1 className={styles.summaryTitle}>SUMMARY</h1>
+                <h1 className={styles.summaryTitle}>Summary</h1>
                 <Discount applyDiscount={applyDiscount}/>
                 <p>Subtotal:</p>
                 <p className={styles.price}>${(Math.round(subtotal * 100) / 100).toFixed(2)}</p>
@@ -86,7 +86,7 @@ function Summary({ subtotal }) {
                 <p className={styles.price}>${(Math.round(tax * 100) / 100).toFixed(2)}</p>
                 <p>Total:</p>
                 <h4 className={styles.price}>${(Math.round(total * 100) / 100).toFixed(2)}</h4>
-                <button className={styles.checkout}>CHECKOUT</button>
+                <button className={styles.checkout}>Checkout</button>
             </div>
             
         </>
