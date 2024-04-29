@@ -20,8 +20,8 @@ function Image({ photoNumber, position = undefined }) {
                             <img src={imageArray[0]} className={`${styles.photo} ${styles.image0}`}></img>
                             <p className={styles.credit}>Photo by Mnz via <a href="https://unsplash.com/photos/pair-of-white-low-top-sneakers-ToLMORRb97Q" className={styles.link}>Unsplash</a></p>
                             <div className={styles.image0Text}>
-                                <h1>Lorem ipsum dolor</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eaque pariatur quo vel, facere quod!</p>
+                                <h1>Lorem ipsum dolor sit amet.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minima unde. Temporibus tenetur quibusdam quis.</p>
                             </div> 
                         </div>
                     }
@@ -30,9 +30,9 @@ function Image({ photoNumber, position = undefined }) {
                             <img src={imageArray[0]} className={`${styles.photo} ${styles.fadeOut} ${styles.image0}`}></img>
                             <p className={styles.credit}>Photo by Mnz via <a href="https://unsplash.com/photos/pair-of-white-low-top-sneakers-ToLMORRb97Q" className={styles.link}>Unsplash</a></p>
                             <div className={styles.image0Text}>
-                                <h1>Lorem ipsum dolor</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eaque pariatur quo vel, facere quod!</p>
-                            </div> 
+                                <h1>Lorem ipsum dolor sit amet.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minima unde. Temporibus tenetur quibusdam quis.</p>
+                            </div>  
                         </div>
                     }           
                     {position === undefined && 
@@ -40,9 +40,9 @@ function Image({ photoNumber, position = undefined }) {
                             <img src={imageArray[0]} className={`${styles.photo} ${styles.image0}`}></img>
                             <p className={styles.credit}>Photo by Mnz via <a href="https://unsplash.com/photos/pair-of-white-low-top-sneakers-ToLMORRb97Q" className={styles.link}>Unsplash</a></p>
                             <div className={styles.image0Text}>
-                                <h1>Lorem ipsum dolor</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eaque pariatur quo vel, facere quod!</p>
-                            </div> 
+                                <h1>Lorem ipsum dolor sit amet.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minima unde. Temporibus tenetur quibusdam quis.</p>
+                            </div>  
                         </div>
                     }
                 </>
@@ -54,8 +54,8 @@ function Image({ photoNumber, position = undefined }) {
                             <img src={imageArray[1]} className={`${styles.photo} ${styles.image1}`}></img>
                             <p className={styles.credit}>Photo by Tamara Bellis via <a href="https://unsplash.com/photos/closeup-photo-of-womans-in-the-middle-of-road-8_LseWE80rA" className={styles.link}>Unsplash</a></p>
                             <div className={styles.image1Text}>
-                                <h1>Lorem ipsum dolor</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eaque pariatur quo vel, facere quod!</p>
+                                <h1>Lorem ipsum dolor sit.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore officiis iusto consequuntur laborum voluptatibus illum consequatur quae ipsam obcaecati odit.</p>
                             </div> 
                         </div>
                     }
@@ -64,8 +64,8 @@ function Image({ photoNumber, position = undefined }) {
                             <img src={imageArray[1]} className={`${styles.photo} ${styles.image1} ${styles.fadeOut}`}></img>
                             <p className={styles.credit}>Photo by Tamara Bellis via <a href="https://unsplash.com/photos/closeup-photo-of-womans-in-the-middle-of-road-8_LseWE80rA" className={styles.link}>Unsplash</a></p>
                             <div className={styles.image1Text}>
-                                <h1>Lorem ipsum dolor</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eaque pariatur quo vel, facere quod!</p>
+                                <h1>Lorem ipsum dolor sit.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore officiis iusto consequuntur laborum voluptatibus illum consequatur quae ipsam obcaecati odit.</p>
                             </div> 
                         </div>
                     }           
@@ -78,8 +78,8 @@ function Image({ photoNumber, position = undefined }) {
                             <img src={imageArray[2]} className={styles.photo}></img>
                             <p className={styles.credit}>Photo by Larm Rmah via <a href="https://unsplash.com/photos/woman-on-wheat-field-during-daytime-R1Ku62Z7zqE" className={styles.link}>Unsplash</a></p>
                             <div className={styles.image2Text}>
-                                <h1>Lorem ipsum dolor</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eaque pariatur quo vel, facere quod!</p>
+                                <h1>Lorem ipsum dolor sit amet.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla exercitationem qui iusto quam harum reiciendis quasi.</p>
                             </div> 
                         </div>
                     }
@@ -88,9 +88,9 @@ function Image({ photoNumber, position = undefined }) {
                             <img src={imageArray[2]} className={`${styles.photo} ${styles.fadeOut}`}></img>
                             <p className={styles.credit}>Photo by Larm Rmah via <a href="https://unsplash.com/photos/woman-on-wheat-field-during-daytime-R1Ku62Z7zqE" className={styles.link}>Unsplash</a></p>
                             <div className={styles.image2Text}>
-                                <h1>Lorem ipsum dolor</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eaque pariatur quo vel, facere quod!</p>
-                            </div> 
+                                <h1>Lorem ipsum dolor sit amet.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla exercitationem qui iusto quam harum reiciendis quasi.</p>
+                            </div>  
                         </div>
                     }           
                 </>
@@ -102,8 +102,8 @@ function Image({ photoNumber, position = undefined }) {
                             <img src={imageArray[3]} className={styles.photo}></img>
                             <p className={styles.credit}>Photo by James Marty via <a href="https://unsplash.com/photos/man-wearing-denim-sport-shirt-and-sunglasses-on-concrete-flooring-h1BuNJZzpC8" className={styles.link}>Unsplash</a></p>
                             <div className={styles.image3Text}>
-                                <h1>Lorem ipsum dolor</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eaque pariatur quo vel, facere quod!</p>
+                                <h1>Lorem ipsum dolor sit amet.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, explicabo saepe eaque voluptas aperiam possimus. Optio iusto pariatur non minima quos saepe veniam impedit amet?</p>
                             </div> 
                         </div>
                     }
@@ -112,9 +112,9 @@ function Image({ photoNumber, position = undefined }) {
                             <img src={imageArray[3]} className={`${styles.photo} ${styles.fadeOut}`}></img>
                             <p className={styles.credit}>Photo by James Marty via <a href="https://unsplash.com/photos/man-wearing-denim-sport-shirt-and-sunglasses-on-concrete-flooring-h1BuNJZzpC8" className={styles.link}>Unsplash</a></p>
                             <div className={styles.image3Text}>
-                                <h1>Lorem ipsum dolor</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eaque pariatur quo vel, facere quod!</p>
-                            </div> 
+                                <h1>Lorem ipsum dolor sit amet.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, explicabo saepe eaque voluptas aperiam possimus. Optio iusto pariatur non minima quos saepe veniam impedit amet?</p>
+                            </div>  
                         </div>
                     }           
                 </>
@@ -126,8 +126,8 @@ function Image({ photoNumber, position = undefined }) {
                             <img src={imageArray[4]} className={`${styles.photo} ${styles.image4}`}></img>
                             <p className={styles.credit}>Photo by josh Dago via <a href="https://www.pexels.com/photo/a-woman-wearing-a-necklace-with-two-gold-pendants-22392076/" className={styles.link}>Pexel</a></p>
                             <div className={styles.image4Text}>
-                                <h1>Lorem ipsum dolor</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eaque pariatur quo vel, facere quod!</p>
+                                <h1>Lorem ipsum dolor sit amet.</h1>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel aperiam placeat commodi eius aliquid iure?</p>
                             </div> 
                         </div>
                     }
@@ -136,8 +136,8 @@ function Image({ photoNumber, position = undefined }) {
                             <img src={imageArray[4]} className={`${styles.photo} ${styles.fadeOut} ${styles.image4}`}></img>
                             <p className={styles.credit}>Photo by josh Dago via <a href="https://www.pexels.com/photo/a-woman-wearing-a-necklace-with-two-gold-pendants-22392076/" className={styles.link}>Pexel</a></p>
                             <div className={styles.image4Text}>
-                                <h1>Lorem ipsum dolor</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eaque pariatur quo vel, facere quod!</p>
+                                <h1>Lorem ipsum dolor sit amet.</h1>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel aperiam placeat commodi eius aliquid iure?</p>
                             </div> 
                         </div>
                     }           
@@ -151,13 +151,13 @@ export default function Slideshow() {
     const [activePhoto, setActivePhoto] = useState(0);
     const [direction, setDirection] = useState(undefined);
 
-    /*useEffect(() => {
+    useEffect(() => {
         let timer = setTimeout(() => {
             handleRight();
         }, 5000);
 
         return () => clearTimeout(timer)
-    }, [activePhoto]);*/
+    }, [activePhoto]);
 
     function handleRight() {
         setDirection('forward');

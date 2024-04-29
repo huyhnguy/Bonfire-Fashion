@@ -90,7 +90,6 @@
     background-color: white;
     padding: 5px;
     font-size: 0.75rem;
-    animation: fadeInAnimation ease 1.5s;
 }
 
 .image0Text {
@@ -103,18 +102,17 @@
 }
 
 .image0 {
-    object-position: right bottom;
+    object-position: left bottom;
 }
 
 .image1 {
-    object-position: left;
 }
 
 .image1Text {
     position: absolute;
     color: black;
     bottom: 50%;
-    right: 5%;
+    right: 7%;
     width: 30%;
     transform: translate(0, 50%);
 }
@@ -123,7 +121,7 @@
     position: absolute;
     color: black;
     bottom: 50%;
-    right: 55%;
+    left: 13%;
     width: 30%;
     transform: translate(0, 50%);
 }
@@ -131,7 +129,7 @@
 .image3Text {
     position: absolute;
     color: black;
-    top: 15%;
+    top: 5%;
     right: 10%;
     width: 30%;
     transform: translate(0, 50%);
