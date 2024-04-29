@@ -1,8 +1,6 @@
-# React + Vite
+Mock Ecommerce Website
+=======================
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project shows a fake online store in which users can pick out items with a desired quantity and put it in their shopping cart. The shopping cart allows users to apply a discount code which will give a 10% discount, adjust quantity of items, and delete items. The purpose of this project was to allow me to practice using React.js, using a React Router, fetching data, react testing, and styling react components.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Site link: shiny-elf-393f23.netlify.app
