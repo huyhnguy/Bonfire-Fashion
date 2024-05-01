@@ -1,11 +1,10 @@
 .quantity {
-    max-width: 2rem;
+    max-width: 1.5rem;
     height:auto;
 }
 
 .quantityContainer {
     display: flex;
-    gap: 1rem;
     align-items: center;
 }
 
@@ -13,32 +12,41 @@
     display: flex;
     flex-direction:column;
     align-items: center;
+    gap: 2rem;
     margin-top: auto;
 }
 
 .image {
-    height: 75%;
+    height: 60%;
     width: 100%;
     object-fit: contain;
-    border: solid;
 }
 
 .container {
     width: 20rem;
-    height: 40rem;
+    height: 35rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    border-radius: 7px;
+    border: solid rgba(128, 128, 128, 0.246);
+    padding: 1rem;
 }
 
 .title {
     font-size: 1rem;
-    margin: 0;
     font-weight: 400;
+}
+
+.number {
+    width: 1rem;
+    text-align: center;
+    pointer-events: none;
 }
 
 .number::-webkit-outer-spin-button,
 .number::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+
 }
