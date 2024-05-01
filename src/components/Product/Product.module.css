@@ -42,6 +42,7 @@
     width: 1rem;
     text-align: center;
     pointer-events: none;
+    -moz-appearance: textfield;
 }
 
 .number::-webkit-outer-spin-button,

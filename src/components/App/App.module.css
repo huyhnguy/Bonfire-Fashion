@@ -62,7 +62,7 @@
 }
 
 .mens {
-    margin: 5rem 2rem 2rem 2rem;
+    margin: 2rem 2rem 2rem 2rem;
 }
 
 .mensPanel {
@@ -104,13 +104,13 @@
     height: 100%;
 }
 
-.jewelry, .mothers {
+.jewelry{
     margin: 2rem;
 }
 
 .panelText {
     margin-top: 1rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .mothers {
@@ -161,8 +161,4 @@
 
 .celebrating {
     margin: 0;
-}
-
-.mothersParagraph {
-    margin-bottom: 1rem;
 }
