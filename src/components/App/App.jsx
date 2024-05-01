@@ -15,6 +15,8 @@ import Signup from "../Signup/Signup"
 import man0 from "../../images/man-0.jpg"
 import man1 from "../../images/man-1.jpg"
 import bracelet from "../../images/bracelet.jpg"
+import mother1 from "../../images/mother-1.jpg"
+import mother2 from "../../images/mother-2.jpg"
 
 export default function App() {
   
@@ -63,6 +65,16 @@ export default function App() {
             <button onClick={handleJewelry}>Shop Jewelry</button>
           </div>
       </section>
+      <section className={styles.mothers}>
+        <div className={styles.mother1Container}>
+          <img src={mother1} className={styles.mother1}></img>
+          <p className={styles.credit}>Photo by Jonathan Borba via <a href="https://unsplash.com/photos/woman-in-black-long-sleeve-shirt-sitting-on-white-couch-n1B6ftPB5Eg" className={styles.link}>Unsplash</a></p>
+        </div>
+        <div className={styles.mother2Container}>
+          <img src={mother2} className={styles.mother2}></img>
+          <p className={styles.credit}>Photo by Hello Revival via <a href="https://unsplash.com/photos/woman-carrying-child-beside-hedges-VPpTlTD0Ylk" className={styles.link}>Unsplash</a></p>
+        </div>
+      </section>
       <Signup />
       <Hyperlinks />
       <Copyright />
@@ -70,35 +82,4 @@ export default function App() {
   )
 }
 
-/*<p className={styles.text}>TRENDY</p>
-      <div className={styles.womens}>
-        <div className={styles.womanContainer}>
-          <img src={coach} className={styles.woman}></img>
-          <p className={styles.credit}>Photo by Godisable Jacob via <a href="https://www.pexels.com/photo/woman-sitting-on-sofa-bed-wearing-sunglasses-965324/" className={styles.link}>Pexels</a></p>
-          <Link to="/womens" className={styles.womanLink}>SHOP WOMENS</Link>
-        </div>
-        <div className={styles.womanContainer}>
-          <img src={frendsmans} className={styles.woman}></img>
-          <p className={styles.credit}>Photo by Konstantin Mishchenko via <a href="https://www.pexels.com/photo/woman-standing-indoor-1926769/" className={styles.link}>Pexels</a></p>
-        </div>
-        <div className={styles.womanContainer}>
-        <img src={wendel} className={styles.woman}></img>
-        <p className={styles.credit}>Photo by wendel moretti via <a href="https://www.pexels.com/photo/woman-wearing-black-sport-1972115/" className={styles.link}>Pexels</a></p>
-        </div>
-      </div>
-      <p className={styles.text}>TIMELESS</p>
-      <div className={styles.womens}>
-        <div className={styles.womanContainer}>
-          <img src={mens1} className={styles.woman}></img>
-          <p className={styles.credit}>Photo by Chloe via <a href="https://www.pexels.com/photo/man-in-white-dress-shirt-holding-suit-jacket-1043474/" className={styles.link}>Pexels</a></p>
-          <Link to="/mens" className={styles.womanLink}>SHOP MENS</Link>
-        </div>
-        <div className={styles.womanContainer}>
-          <img src={mens2} className={styles.woman}></img>
-          <p className={styles.credit}>Photo by Yogendra  Singh via <a href="https://www.pexels.com/photo/man-in-red-dress-shirt-near-wall-1760900/" className={styles.link}>Pexels</a></p>
-        </div>
-        <div className={styles.womanContainer}>
-        <img src={mens3} className={styles.woman}></img>
-        <p className={styles.credit}>Photo by Visión De Enfoque via <a href="https://www.pexels.com/photo/man-with-braided-hair-in-yellow-outfit-3341231/" className={styles.link}>Pexels</a></p>
-        </div>
-      </div>*/
+

@@ -104,11 +104,42 @@
     height: 100%;
 }
 
-.jewelry {
+.jewelry, .mothers {
     margin: 2rem;
 }
 
 .panelText {
     margin-top: 1rem;
     margin-bottom: 5rem;
+}
+
+.mothers {
+    height: 80vh;
+    background-color: #fed6ff;
+    position: relative;
+}
+
+.mother1Container {
+    position: relative;
+    height: 100%;
+}
+
+.mother1 {
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+.mother2Container {
+    height: 75%;
+    padding: 0.5rem;
+    position: absolute;
+    top: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    right: 15%;
+}
+
+.mother2 {
+    height: 100%;
 }
