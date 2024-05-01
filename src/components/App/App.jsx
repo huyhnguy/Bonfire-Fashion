@@ -32,6 +32,11 @@ export default function App() {
     navigate(path);
   }
 
+  function handleWomens() {
+    let path = `/womens`; 
+    navigate(path);
+  }
+
   return (
     <>
       <Countdown />
@@ -54,6 +59,22 @@ export default function App() {
           <button onClick={handleMens}>Shop Mens</button>
         </div>
       </section>
+      <section className={styles.mothers}>
+        <div className={styles.mothersText}>
+          <h2 className={styles.celebrating}>CELEBRATING</h2>
+          <h1 className={styles.mothersHeadline}>MOTHER'S DAY</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, sequi, voluptatem natus repellendus vitae ducimus excepturi ipsa culpa corrupti odio accusantium iste obcaecati numquam sit.</p>
+          <button onClick={handleWomens}>Shop Womens</button>
+        </div>
+        <div className={styles.mother1Container}>
+          <img src={mother1} className={styles.mother1}></img>
+          <p className={styles.credit}>Photo by Jonathan Borba via <a href="https://unsplash.com/photos/woman-in-black-long-sleeve-shirt-sitting-on-white-couch-n1B6ftPB5Eg" className={styles.link}>Unsplash</a></p>
+        </div>
+        <div className={styles.mother2Container}>
+          <img src={mother2} className={styles.mother2}></img>
+          <p className={styles.credit}>Photo by Hello Revival via <a href="https://unsplash.com/photos/woman-carrying-child-beside-hedges-VPpTlTD0Ylk" className={styles.link}>Unsplash</a></p>
+        </div>
+      </section>
       <section className={styles.jewelry}>
           <div className={styles.jewelryContainer}>
             <img src={bracelet} className={styles.bracelet}></img>
@@ -64,16 +85,6 @@ export default function App() {
             <p>High-quality jewelry made to stay elegant forever.</p>
             <button onClick={handleJewelry}>Shop Jewelry</button>
           </div>
-      </section>
-      <section className={styles.mothers}>
-        <div className={styles.mother1Container}>
-          <img src={mother1} className={styles.mother1}></img>
-          <p className={styles.credit}>Photo by Jonathan Borba via <a href="https://unsplash.com/photos/woman-in-black-long-sleeve-shirt-sitting-on-white-couch-n1B6ftPB5Eg" className={styles.link}>Unsplash</a></p>
-        </div>
-        <div className={styles.mother2Container}>
-          <img src={mother2} className={styles.mother2}></img>
-          <p className={styles.credit}>Photo by Hello Revival via <a href="https://unsplash.com/photos/woman-carrying-child-beside-hedges-VPpTlTD0Ylk" className={styles.link}>Unsplash</a></p>
-        </div>
       </section>
       <Signup />
       <Hyperlinks />
