@@ -2,8 +2,7 @@ import styles from "./Sale.module.css"
 import { useState, useEffect } from "react";
 
 export default function Countdown() {
-    const countDate = new Date('May 1, 2024 00:00:00').getTime();
-    //const now = new Date().getTime();
+    const countDate = new Date('December 26, 2024 00:00:00').getTime();
     const [now, setNow] = useState(new Date().getTime());
 
     useEffect(() => {
