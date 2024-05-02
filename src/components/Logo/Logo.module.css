@@ -1,10 +1,11 @@
 .title {
     font-family: "Shrikhand", serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     border: none;
     padding: 0;
     color:#f0544d;
-    
+    margin: 0;
+    justify-self:start;
 }
 
 .title:hover {
