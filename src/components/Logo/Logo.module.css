@@ -1,6 +1,6 @@
 .title {
     font-family: "Shrikhand", serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     border: none;
     padding: 0;
     color:#f0544d;
@@ -12,5 +12,5 @@
     background-color: transparent;
     cursor: pointer;
     transform: scale(1.025);
-    transition: 0.3s;
+    transition: 0.2s;
 }
