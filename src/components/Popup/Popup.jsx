@@ -38,7 +38,7 @@ export default function PopUp({ data, closeFunction }) {
                         </div>
                         <button className={styles.button} onClick={handleClick}>See Shopping Cart</button>
                     </div>
-                    <div id={styles.overlay}></div>
+                    <div id={styles.overlay} onClick={closeFunction}></div>
                 </>
                 
             )
