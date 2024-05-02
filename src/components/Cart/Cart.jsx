@@ -5,6 +5,7 @@ import Countdown from "../Sale/Sale";
 import Copyright from "../Copyright/Copyright";
 import Signup from "../Signup/Signup";
 import Hyperlinks from "../Hyperlinks/Hyperlinks";
+import del from "../../images/delete.svg"
 
 function Discount({ applyDiscount }) {
     const [discount, setDiscount] = useState(false);
@@ -168,8 +169,8 @@ export default function Cart() {
                     <p className={styles.itemPrice}>${(Math.round(itemTotal * 100) / 100).toFixed(2)}</p>
                     <div className={styles.quantitybox}>
                         <label>Quantity:</label>
-                        <input type="number" defaultValue={product.quantity} onChange={handleChange} className={styles.input}></input>
-                        <button onClick={handleDelete} className={styles.delete}>Delete</button>
+                        <input type="number" defaultValue={product.quantity} onChange={handleChange} className={styles.quantity}></input>
+                        <img src={del} onClick={handleDelete} className={styles.delete}></img>
                     </div>
                 </div>
                 )
