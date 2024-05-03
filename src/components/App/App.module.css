@@ -144,11 +144,14 @@
     }
 
     .mother1 {
-        width: 50%;
+        width: 75%;
         object-fit: cover;
         height: 50%;
-        bottom: 5%;
-        right: 5%;
+        bottom: 0%;
+        right: 0%;
+        z-index: 0;
+        object-position: 0% 25%;
+        margin: 0 1rem 1rem 0;
     }
 
     .mother2Container {
@@ -161,9 +164,16 @@
 
     .mothersText {
         width: 75%;
-        left: 40%;
-        top: 25%;
+        left: 0%;
+        top: 0%;
+        transform: none;
         max-width: none;
+        z-index: 1;
+        margin: 1rem 0 0 1rem;
+    }
+
+    .mothersParagraph {
+        display: none;
     }
 
     .jewelry {

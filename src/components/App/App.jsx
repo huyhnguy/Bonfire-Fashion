@@ -57,7 +57,7 @@ export default function App() {
         <div className={styles.mothersText}>
           <h2 className={styles.celebrating}>CELEBRATE</h2>
           <h1 className={styles.mothersHeadline}>MOTHER'S DAY</h1>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, sequi, voluptatem natus repellendus vitae ducimus excepturi ipsa culpa corrupti odio accusantium iste obcaecati numquam sit.</p>
+          <p className={styles.mothersParagraph}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, sequi, voluptatem natus repellendus vitae ducimus excepturi ipsa culpa corrupti odio accusantium iste obcaecati numquam sit.</p>
           <button onClick={handleWomens}>Shop Womens</button>
         </div>
         <div className={styles.mother1Container}>

@@ -50,7 +50,9 @@ a {
 }
 
 @media (max-width: 600px) {
-
+  body {
+    max-width: 100%;
+  }
 }
 
 
