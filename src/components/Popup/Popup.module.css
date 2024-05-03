@@ -61,8 +61,7 @@ h1 {
 }
 
 .image {
-    height: auto;
-    width: 250px;
+    max-width: 250px;
     border-right: solid;
     grid-area: image;
     padding: 1rem;
@@ -87,8 +86,7 @@ p{
 
 .bodytext {
     grid-area: text;
-    width: 250px;
-    height: auto;
+    max-width: 250px;
     padding: 1rem;
 }
 

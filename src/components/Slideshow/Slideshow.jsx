@@ -151,13 +151,13 @@ export default function Slideshow() {
     const [activePhoto, setActivePhoto] = useState(0);
     const [direction, setDirection] = useState(undefined);
 
-    useEffect(() => {
+    /*useEffect(() => {
         let timer = setTimeout(() => {
             handleRight();
         }, 5000);
 
         return () => clearTimeout(timer)
-    }, [activePhoto]);
+    }, [activePhoto]);*/
 
     function handleRight() {
         setDirection('forward');

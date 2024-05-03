@@ -98,7 +98,6 @@
     bottom: 10%;
     right: 65%;
     width: 30%;
-
 }
 
 .image0 {
@@ -129,7 +128,7 @@
 .image3Text {
     position: absolute;
     color: black;
-    top: 5%;
+    top: -5%;
     right: 10%;
     width: 30%;
     transform: translate(0, 50%);
@@ -142,4 +141,40 @@
     right: 7%;
     width: 30%;
     transform: translate(0, 50%);
+}
+
+@media (max-width: 600px) {
+    .slideshow {
+        margin: 0;
+    }
+
+    .image0Text {
+        bottom: 10%;
+        left: 10%;
+        width: 60%;
+    }
+
+    .image1Text {
+        width: 60%;
+        border-radius: 10px;
+        padding: 5px;
+        bottom: 25%;
+    }
+
+    .image2Text {
+        width: 60%;
+        bottom: 75%;
+        left: 5%;
+    }
+
+    .image3Text{
+        width: 75%;
+        top: -10%;
+        right: 0%;
+    }
+
+    .image4Text {
+        width: 60%;
+        bottom: 25%;
+    }
 }
