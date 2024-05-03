@@ -62,8 +62,6 @@ h1 {
 
 .image {
     max-width: 250px;
-    border-right: solid;
-    grid-area: image;
     padding: 1rem;
 }
 
@@ -73,19 +71,12 @@ p{
 }
 
 .body {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-        "image text"
-        "image text"
-    ;
     gap: 1rem 0;
     border: solid;
     border-radius: 5px;
 }
 
 .bodytext {
-    grid-area: text;
     max-width: 250px;
     padding: 1rem;
 }

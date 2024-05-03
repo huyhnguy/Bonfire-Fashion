@@ -1,9 +1,12 @@
 .hyperlinks {
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    justify-items: center;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
     background-color:rgba(228, 228, 228, 0.3);
     color: black;
+    padding-inline: 2rem;
+
 }
 
 .hyperlink:hover {
