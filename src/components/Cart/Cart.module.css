@@ -154,4 +154,13 @@ button {
     cursor: pointer;
 }
 
+@media (max-width: 600px) {
+    .section {
+        display: block;
+    }
+
+    .summary {
+        margin: 2rem;
+    }
+}
 
