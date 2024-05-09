@@ -3,9 +3,9 @@ import right from "../../images/right.svg"
 import left from "../../images/left.svg"
 import { useState, useEffect } from "react"
 import zero from "../../images/slideshow-0-small.jpg"
-import one from "../../images/slideshow-1.jpg"
-import two from "../../images/slideshow-2.jpg"
-import three from "../../images/slideshow-3.jpg"
+import one from "../../images/slideshow-1-small.jpg"
+import two from "../../images/slideshow-2-small.jpg"
+import three from "../../images/slideshow-3-small.jpg"
 import four from "../../images/slideshow-4.jpg"
 
 function Image({ photoNumber, position = undefined }) {
