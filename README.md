@@ -24,6 +24,7 @@ The purpose of this project was to gain proficiency in using React and UX and UI
 
 ## How to Run Project Locally
 1. Clone this repository
-2. run ```npm install``` in your bash/command line
-3. run ```npm run dev``` in your bash/command line
+2. cd or change directory to the project directory
+3. run ```npm install``` in your bash/command line
+4. run ```npm run dev``` in your bash/command line
 
