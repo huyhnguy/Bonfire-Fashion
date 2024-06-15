@@ -18,4 +18,4 @@ The purpose of this project was to gain proficiency in using React and UX and UI
 
 ## Live Site 
 
-[https://shiny-elf-393f23.netlify.app/)](https://shiny-elf-393f23.netlify.app/)
+[https://shiny-elf-393f23.netlify.app/](https://shiny-elf-393f23.netlify.app/)
