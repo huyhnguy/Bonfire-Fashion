@@ -1,6 +1,8 @@
 # Mock Ecommerce Website
 
-![Screenshot of Project](/src/images/Screenshot%202024-06-01%20at%209.12.39 PM.png "Project Screenshot")
+![Screenshot of front page](/src/images/Screenshot%202024-06-01%20at%209.12.39 PM.png "Front page")
+![Screenshot of shopping tab](/src/images/shop_page.png "Shopping tab")
+![Screenshot of cart tab](/src/images/cart_tab.png "Cart tab")
 
 ## Description
 
