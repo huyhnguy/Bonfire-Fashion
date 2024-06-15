@@ -21,3 +21,9 @@ The purpose of this project was to gain proficiency in using React and UX and UI
 ## Live Site 
 
 [https://shiny-elf-393f23.netlify.app/](https://shiny-elf-393f23.netlify.app/)
+
+## How to Run Project Locally
+1. Clone this repository
+2. run ```npm install``` in your bash/command line
+3. run ```npm run dev``` in your bash/command line
+
