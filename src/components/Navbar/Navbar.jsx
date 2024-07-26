@@ -68,7 +68,7 @@ export default function Navbar({ activeTab }) {
 
     return (
         <>
-            {size.width > 600 ?         
+            {size.width > 750 ?         
                 <nav role="navigation" className={styles.navigation}>
                     <Logo />
                     <div className={styles.categories}>

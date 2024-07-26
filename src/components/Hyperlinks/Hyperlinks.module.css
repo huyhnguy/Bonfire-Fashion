@@ -13,3 +13,10 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+    .hyperlinks {
+        flex-direction: column;
+        justify-content: normal;
+    }
+}
