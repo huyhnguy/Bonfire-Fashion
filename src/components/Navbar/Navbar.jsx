@@ -3,7 +3,9 @@ import styles from "./Navbar.module.css"
 import Logo from "../Logo/Logo"
 import cart from "../../images/cart.svg"
 import useWindowSize from "../UseWindowSize/UseWindowSize"
-import hamburger from "../../images/bars-solid.svg"
+import hamburgerIcon from "../../images/bars-solid.svg"
+import { useState } from "react"
+import rectangleX from "../../images/rectangle-x.svg"
 
 
 function Tab({ tabname, path, active }) {
@@ -37,8 +39,33 @@ function CartTab() {
     )
 }
 
+function HamMenu() {
+    return (
+        <nav>
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    )
+}
+
 export default function Navbar({ activeTab }) {
+    const [hamburger, setHamburger] = useState(false);
+
     const size = useWindowSize();
+
+    const handleHamburger = () => {
+        if (hamburger) {
+            document.body.classList.remove("fixed-position");
+            setHamburger(false);
+        } else {
+            document.body.classList.add("fixed-position");
+            setHamburger(true);
+        }
+    }
+
     return (
         <>
             {size.width > 600 ?         
@@ -55,8 +82,25 @@ export default function Navbar({ activeTab }) {
             : 
             <nav className={styles.hamburgerNav}>
                 <Logo />
-                <img className={styles.hamburger} src={hamburger}></img>  
+                <img className={styles.hamburger} src={hamburgerIcon} onClick={handleHamburger}></img>  
             </nav>
+            }
+            { hamburger && 
+                    <>
+                        <div className={styles.hamburgerMenu}>
+                            <img className={styles.exitHamburger} src={rectangleX} alt="" onClick={handleHamburger} />
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="mens">Mens</a></li>
+                                <li><a href="womens">Womens</a></li>
+                                <li><a href="jewelry">Jewelry</a></li>
+                                <li><a href="electronics">Electronics</a></li>
+                                <li><a href="cart">Shopping Cart</a></li>
+                            </ul>
+                        </div>
+                        <div className={styles.shadow}></div>
+                    </>
+
             }
         </>
 

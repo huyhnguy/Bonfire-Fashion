@@ -82,11 +82,65 @@
     padding-inline: 15px;
     position: sticky;
     top: 0;
-    z-index: 9;
     background-color: white;
+    z-index:2;
 }
 
 .hamburger {
     height: 3rem;
 }
+
+.hamburgerMenu {
+    position: absolute;
+    background-color: white;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.hamburgerMenu ul {
+    list-style-type: none;
+    height: 100vh;
+    padding: 0 3rem;
+}
+
+.hamburgerMenu ul li {
+    margin: 15px;
+}
+
+.hamburgerMenu ul li a {
+    color: black;
+    cursor: pointer;
+}
+
+.hamburgerMenu ul li a:hover {
+    color: #f0544d;
+
+}
+
+.shadow {
+    background-color: rgba(0, 0, 0, 0.382);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.exitHamburger {
+    height: 3rem;
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: 15px;
+    display: block;
+}
+
+
+
+
+  
   

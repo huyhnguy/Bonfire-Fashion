@@ -25,6 +25,10 @@ body {
   margin: 0;
 }
 
+.fixed-position {
+  position: fixed;
+}
+
 button {
   background-color: #f0544d;
   color: white;
