@@ -73,4 +73,20 @@
     right: 0;
     padding: 1px;
 }
+
+.hamburgerNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-inline: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background-color: white;
+}
+
+.hamburger {
+    height: 3rem;
+}
   

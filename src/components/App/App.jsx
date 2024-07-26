@@ -39,11 +39,11 @@ export default function App() {
       <section className={styles.mens}>
         <div className={styles.mensPanel}>
           <div className={styles.manContainer}>
-            <img src={man0} className={styles.man0}></img>
+            <img src={man0} className={styles.man0} loading="lazy"></img>
             <p className={styles.credit}>Photo by Karl Fredrickson via <a href="https://unsplash.com/photos/man-standing-facing-mountains-during-sunset-DsAjH9B24G8" className={styles.link}>Unsplash</a></p>
           </div>
           <div className={styles.manContainer}>
-            <img src={man1} className={styles.man1}></img>
+            <img src={man1} className={styles.man1} loading="lazy"></img>
             <p className={styles.credit}>Photo by Brooke Cagle via <a href="https://unsplash.com/photos/man-standing-on-road-between-sand-7iTE5rhI6lc" className={styles.link}>Unsplash</a></p>
           </div>
         </div>
@@ -61,17 +61,17 @@ export default function App() {
           <button onClick={handleWomens}>Shop Womens</button>
         </div>
         <div className={styles.mother1Container}>
-          <img src={mother1} className={styles.mother1}></img>
+          <img src={mother1} className={styles.mother1} loading="lazy"></img>
           <p className={styles.credit}>Photo by Jonathan Borba via <a href="https://unsplash.com/photos/woman-in-black-long-sleeve-shirt-sitting-on-white-couch-n1B6ftPB5Eg" className={styles.link}>Unsplash</a></p>
         </div>
         <div className={styles.mother2Container}>
-          <img src={mother2} className={styles.mother2}></img>
+          <img src={mother2} className={styles.mother2} loading="lazy"></img>
           <p className={styles.credit}>Photo by Hello Revival via <a href="https://unsplash.com/photos/woman-carrying-child-beside-hedges-VPpTlTD0Ylk" className={styles.link}>Unsplash</a></p>
         </div>
       </section>
       <section className={styles.jewelry}>
           <div className={styles.jewelryContainer}>
-            <img src={bracelet} className={styles.bracelet}></img>
+            <img src={bracelet} className={styles.bracelet} loading="lazy"></img>
             <p className={styles.credit}>Photo by Christian Lucas via <a href="https://unsplash.com/photos/silver-and-diamond-studded-bracelet-LrQys_Ukuak" className={styles.link}>Unsplash</a></p>
           </div>
           <div className={styles.panelText}>

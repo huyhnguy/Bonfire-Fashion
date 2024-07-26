@@ -2,6 +2,8 @@ import { Link, useNavigate } from "react-router-dom"
 import styles from "./Navbar.module.css"
 import Logo from "../Logo/Logo"
 import cart from "../../images/cart.svg"
+import useWindowSize from "../UseWindowSize/UseWindowSize"
+import hamburger from "../../images/bars-solid.svg"
 
 
 function Tab({ tabname, path, active }) {
@@ -36,16 +38,28 @@ function CartTab() {
 }
 
 export default function Navbar({ activeTab }) {
+    const size = useWindowSize();
     return (
-        <div role="navigation" className={styles.navigation}>
-            <Logo />
-            <div className={styles.categories}>
-                { activeTab === 'mens' ? <Tab tabname= "MENS" path= "/mens" role="link" active="active"/> : <Tab tabname= "MENS" path= "/mens" role="link" /> }
-                { activeTab === 'womens' ? <Tab tabname= "WOMENS" path= "/womens" role= "link" active="active" /> :<Tab tabname= "WOMENS" path= "/womens" role= "link" /> }
-                { activeTab === 'jewelry' ? <Tab tabname= "JEWELRY" path= "/jewelry" role="link" active="active" /> :<Tab tabname= "JEWELRY" path= "/jewelry" role="link" /> }
-                { activeTab === 'electronics' ? <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" active="active" /> :<Tab tabname= "ELECTRONICS" path= "/electronics" role="link" /> }
-            </div>
-            <CartTab role="link"/>
-        </div>
+        <>
+            {size.width > 600 ?         
+                <nav role="navigation" className={styles.navigation}>
+                    <Logo />
+                    <div className={styles.categories}>
+                        { activeTab === 'mens' ? <Tab tabname= "MENS" path= "/mens" role="link" active="active"/> : <Tab tabname= "MENS" path= "/mens" role="link" /> }
+                        { activeTab === 'womens' ? <Tab tabname= "WOMENS" path= "/womens" role= "link" active="active" /> :<Tab tabname= "WOMENS" path= "/womens" role= "link" /> }
+                        { activeTab === 'jewelry' ? <Tab tabname= "JEWELRY" path= "/jewelry" role="link" active="active" /> :<Tab tabname= "JEWELRY" path= "/jewelry" role="link" /> }
+                        { activeTab === 'electronics' ? <Tab tabname= "ELECTRONICS" path= "/electronics" role="link" active="active" /> :<Tab tabname= "ELECTRONICS" path= "/electronics" role="link" /> }
+                    </div>
+                    <CartTab role="link"/>
+                </nav> 
+            : 
+            <nav className={styles.hamburgerNav}>
+                <Logo />
+                <img className={styles.hamburger} src={hamburger}></img>  
+            </nav>
+            }
+        </>
+
+
     )
 }
