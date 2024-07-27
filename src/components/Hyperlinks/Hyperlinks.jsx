@@ -2,7 +2,7 @@ import styles from "./Hyperlinks.module.css"
 
 export default function Hyperlinks() {
     return (
-        <section className={styles.hyperlinks}>
+        <section aria-label="links" className={styles.hyperlinks}>
             <div>
                 <h2>About Us</h2>
                 <p className={styles.hyperlink}>Our Story</p>

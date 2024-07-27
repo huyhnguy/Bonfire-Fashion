@@ -11,7 +11,7 @@ import rectangleX from "../../images/rectangle-x.svg"
 function Tab({ tabname, path, active }) {
     return (
         <div>
-            {active != undefined ? <Link to={path} className={`${styles.tab} ${styles.active}`}>{tabname}</Link> :
+            {active != undefined ? <Link aria-hidden to={path} className={`${styles.tab} ${styles.active}`}>{tabname}</Link> :
                 <Link className={styles.tab} to={path}>{tabname}</Link>}
         </div>
     )

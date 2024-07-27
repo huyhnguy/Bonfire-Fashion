@@ -12,6 +12,7 @@ import bracelet from "../../images/bracelet.jpg"
 import mother1 from "../../images/mother-1.jpg"
 import mother2 from "../../images/mother-2.jpg"
 import ImageCarousel from "../ImageCarousel/ImageCarousel"
+import Footer from "../Footer"
 
 export default function App() {
   
@@ -34,8 +35,10 @@ export default function App() {
 
   return (
     <>
-      <Countdown />
-      <Navbar activeTab='home'/>
+      <header>
+        <Countdown />
+        <Navbar activeTab='home'/>
+      </header>
       <ImageCarousel />
       { /*
       <section className={styles.mens}>
@@ -82,9 +85,7 @@ export default function App() {
             <button onClick={handleJewelry}>Shop Jewelry</button>
           </div> 
   </section> */ }
-      <Signup />
-      <Hyperlinks />
-  <Copyright /> 
+      <Footer />
     </>
   )
 }

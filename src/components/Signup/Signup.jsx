@@ -12,10 +12,13 @@ export default function Signup() {
     }
     
     return (
-        <form className={styles.container}>
-            <h3>Get Email Updates:</h3>
-            <input type="email" className={styles.input} placeholder="Email Address" id="email" required></input>
-            <button className={styles.button} onClick={(e) => {handleSignUp(e)}}>Sign Up</button>
-        </form>
+        <section aria-label="Email Updates Signup">
+            <form className={styles.container}>
+                <h3>Get Email Updates:</h3>
+                <input type="email" className={styles.input} placeholder="Email Address" id="email" required></input>
+                <button className={styles.button} onClick={(e) => {handleSignUp(e)}}>Sign Up</button>
+            </form>
+        </section>
+
     )
 }

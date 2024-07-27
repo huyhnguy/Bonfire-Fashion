@@ -37,7 +37,7 @@ export default function ImageCarousel() {
     }
 
     return(
-        <section aria-label="image carousel" className={styles.container}>
+        <section aria-label="Image Carousel" className={styles.container}>
             <div className={styles.imageCarousel}>
                 <div className={styles.allImages}>
                     {imageArray.map((image, index) => (
