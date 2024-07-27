@@ -32,9 +32,9 @@ function CartTab() {
     }
 
     return (
-        <div className={styles.cartContainer}>
-            <img src={cart} className={styles.cart} onClick={handleClick}></img> 
-            {totalQuantity > 0 && <div className={styles.dot}>{totalQuantity}</div>}
+        <div className={styles.cartContainer} aria-label="Shopping Cart">
+            <img aria-hidden src={cart} className={styles.cart} onClick={handleClick}></img> 
+            {totalQuantity > 0 && <div aria-hidden className={styles.dot}>{totalQuantity}</div>}
         </div>  
     )
 }

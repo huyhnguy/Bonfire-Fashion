@@ -1,0 +1,106 @@
+.leftImg, 
+.rightImg {
+    height: 4rem;
+}
+
+.leftButton {
+    left: 0;
+}
+
+#rightButton {
+    right: 0;
+}
+
+.carouselButton {
+    all:unset;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 100ms ease-in-out;
+}
+
+.carouselButton:hover,
+.carouselButton:focus-visible {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.carouselButton:focus-visible,
+.circleButton:focus-visible {
+    outline: auto;
+}
+
+.carouselButton:active > * {
+    animation: squish 200ms ease-in-out;
+}
+
+@keyframes squish {
+    50% {
+        scale: 1.4 0.6;
+    }
+}
+
+.carouselButton:active {
+    background-color: transparent;
+}
+
+.imageCarousel {
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    aspect-ratio: 16/9;
+    margin: 0 auto;
+}
+
+.imageCarouselImage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: translate 300ms ease-in-out;
+}
+
+.allImages {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.circleButtonContainer {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    translate: -50%;
+    display: flex;
+    gap: 0.25rem;
+}
+
+.circleButton {
+    all:unset;
+}
+
+.circleImg {
+    height: 1rem;
+}
+
+.circleImgActive {
+    height: 1.25rem;
+}
+.circleImg:hover, .circleButton:focus-visible {
+    scale: 1.2;
+}
+
+.circleButton:hover, .circleButton:active {
+    background-color: transparent;
+
+}

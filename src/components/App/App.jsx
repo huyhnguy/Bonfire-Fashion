@@ -11,6 +11,7 @@ import man1 from "../../images/man-1.jpg"
 import bracelet from "../../images/bracelet.jpg"
 import mother1 from "../../images/mother-1.jpg"
 import mother2 from "../../images/mother-2.jpg"
+import ImageCarousel from "../ImageCarousel/ImageCarousel"
 
 export default function App() {
   
@@ -35,7 +36,8 @@ export default function App() {
     <>
       <Countdown />
       <Navbar activeTab='home'/>
-      <Slideshow />
+      <ImageCarousel />
+      { /*
       <section className={styles.mens}>
         <div className={styles.mensPanel}>
           <div className={styles.manContainer}>
@@ -78,11 +80,11 @@ export default function App() {
             <h1>Timeless</h1>
             <p>High-quality jewelry made to stay elegant forever.</p>
             <button onClick={handleJewelry}>Shop Jewelry</button>
-          </div>
-      </section>
+          </div> 
+  </section> */ }
       <Signup />
       <Hyperlinks />
-      <Copyright />
+  <Copyright /> 
     </>
   )
 }

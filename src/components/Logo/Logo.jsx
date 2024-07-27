@@ -11,6 +11,6 @@ export default function Logo() {
     }
 
     return (
-        <h1 onClick={handleClick} className={styles.title}>HUY'S</h1>
+        <h1 aria-label="Home" onClick={handleClick} className={styles.title}>HUY'S</h1>
     )
 }

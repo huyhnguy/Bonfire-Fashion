@@ -25,8 +25,8 @@ export default function Countdown() {
     const textSecond = Math.floor((gap % minute) / second);
 
     return (
-        <div className={styles.container}>
+        <section aria-label="Sitewide Sale Message" className={styles.container}>
             <p className={styles.sale}>10% OFF SITEWIDE! Use code '<span className={styles.emphasis}>HUYS</span>' before checkout. {textDay}:{textHour}:{textMinute}:{textSecond}</p>
-        </div>
+        </section>
     )
 }
