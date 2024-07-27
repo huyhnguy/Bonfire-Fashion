@@ -35,10 +35,8 @@ export default function App() {
 
   return (
     <>
-      <header>
-        <Countdown />
-        <Navbar activeTab='home'/>
-      </header>
+      <Countdown />
+      <Navbar activeTab='home'/>
       <ImageCarousel />
       { /*
       <section className={styles.mens}>
