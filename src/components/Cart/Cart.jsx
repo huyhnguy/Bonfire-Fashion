@@ -6,6 +6,7 @@ import Copyright from "../Copyright/Copyright";
 import Signup from "../Signup/Signup";
 import Hyperlinks from "../Hyperlinks/Hyperlinks";
 import del from "../../images/delete.svg"
+import { useNavigate } from "react-router-dom";
 
 function Discount({ applyDiscount }) {
     const [discount, setDiscount] = useState(false);
@@ -52,6 +53,8 @@ function Discount({ applyDiscount }) {
 function Summary({ subtotal }) {
     const [discount, setDiscount] = useState(0);
 
+    const navigate = useNavigate();
+
     let shippingHandling;
     if (localStorage.length > 0) {
         shippingHandling = 8;
@@ -67,6 +70,12 @@ function Summary({ subtotal }) {
         } else {
             console.log(`code is ${code}`);
         }
+    }
+
+    function handleCheckout() {
+        alert("Thanks for your order!");
+        localStorage.clear();
+        navigate("/");
     }
 
     return(
@@ -87,7 +96,7 @@ function Summary({ subtotal }) {
                 <p className={styles.price}>${(Math.round(tax * 100) / 100).toFixed(2)}</p>
                 <p>Total:</p>
                 <h4 className={styles.price}>${(Math.round(total * 100) / 100).toFixed(2)}</h4>
-                <button className={styles.checkout}>Checkout</button>
+                <button className={styles.checkout} onClick={handleCheckout}>Checkout</button>
             </div>
             
         </>
