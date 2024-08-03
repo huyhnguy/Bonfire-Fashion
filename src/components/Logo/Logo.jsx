@@ -18,7 +18,7 @@ export default function Logo() {
         { size.width > 850 ?         
           <h1 aria-label="Home" onClick={handleClick} id={styles.title}>B<img src={logo} alt="logo" style={{ height: "2.5rem" }}/>NFIRE</h1>
           :
-          <img src={logo} alt="logo" style={{ height: "2.5rem", marginBlock: "1rem" }}/>
+          <img src={logo} alt="logo" id={styles.logo} style={{ height: "2.5rem", marginBlock: "1rem" }} onClick={handleClick}/>
         }
       </>
 

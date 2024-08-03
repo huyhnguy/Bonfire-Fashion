@@ -90,6 +90,10 @@
     height: 3rem;
 }
 
+.hamburger:hover {
+    cursor: pointer;
+}
+
 .hamburgerMenu {
     position: absolute;
     background-color: white;

@@ -14,3 +14,9 @@
     transform: scale(1.025);
     transition: 0.2s;
 }
+
+#logo:hover {
+    cursor:pointer;
+    transform: scale(1.025);
+    transition: 0.2s;
+}
