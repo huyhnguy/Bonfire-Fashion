@@ -1,6 +1,7 @@
 import styles from "./Logo.module.css"
-import { Link } from "react-router-dom";
+import useWindowSize from "../UseWindowSize/UseWindowSize"
 import { useNavigate } from "react-router-dom";
+import logo from "../../images/fire-solid.svg"
 
 export default function Logo() {
     let navigate = useNavigate(); 
@@ -10,7 +11,16 @@ export default function Logo() {
       navigate(path);
     }
 
+    const size = useWindowSize();
+
     return (
-        <h1 aria-label="Home" onClick={handleClick} className={styles.title}>HUY'S</h1>
+      <>
+        { size.width > 850 ?         
+          <h1 aria-label="Home" onClick={handleClick} id={styles.title}>B<img src={logo} alt="logo" style={{ height: "2.5rem" }}/>NFIRE</h1>
+          :
+          <img src={logo} alt="logo" style={{ height: "2.5rem", marginBlock: "1rem" }}/>
+        }
+      </>
+
     )
 }

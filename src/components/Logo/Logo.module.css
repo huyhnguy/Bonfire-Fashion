@@ -1,14 +1,14 @@
-.title {
+#title {
     font-family: "Shrikhand", serif;
     font-size: 3rem;
+    font-weight:normal;
     border: none;
     padding: 0;
-    color:#f0544d;
     margin: 0;
     justify-self:start;
 }
 
-.title:hover {
+#title:hover {
     background-color: transparent;
     cursor: pointer;
     transform: scale(1.025);
